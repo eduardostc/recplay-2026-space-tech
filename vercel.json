@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "routes": [
+    { "src": "/visao-de-futuro", "dest": "/visao-de-futuro.html" },
+    { "src": "/eventos", "dest": "/eventos.html" },
+    { "src": "/static/(.*)", "dest": "/static/$1" },
+    { "src": "/(.*)", "dest": "/$1" }
+  ]
+}

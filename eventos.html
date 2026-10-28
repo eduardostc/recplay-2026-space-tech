@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://localhost:8080/eventos -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programação Oficial | Arena GO Recife Space Tech - REC'N'PLAY 2026</title>
+
+  <!-- Tipografia Oficial LaUrsa: DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./eventos_files/css2" rel="stylesheet">
+
+  <!-- Frameworks Base -->
+  <link href="./eventos_files/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./eventos_files/bootstrap-icons.min.css">
+
+  <style>
+    /* DESIGN TOKENS - DESIGN SYSTEM LAURSA (EMPREL) */
+    :root {
+      --laursa-primary-shine: #C4DCFF;
+      --laursa-primary-light: #6EA1F7;
+      --laursa-primary-default: #3E82F4;
+      --laursa-primary-medium: #346DCC;
+      --laursa-primary-dark: #2957A3;
+
+      --laursa-secondary-default: #11B163;
+      --laursa-secondary-dark: #0A6639;
+
+      --laursa-going-default: #FFBC00;
+      --laursa-going-dark: #B88700;
+
+      --laursa-radius-sm: 4px;
+      --laursa-radius-md: 8px;
+      --laursa-radius-lg: 16px;
+      --laursa-elevation-1: 0 4px 8px rgba(0, 0, 0, 0.08);
+      --laursa-elevation-2: 0 8px 16px rgba(0, 0, 0, 0.12);
+
+      --laursa-font: 'DM Sans', sans-serif;
+    }
+
+    body {
+      font-family: var(--laursa-font);
+      background-color: #F8FAFC;
+      color: #1E293B;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Barra Superior do Governo */
+    .barra-governo {
+      height: 38px;
+      background: #FFFFFF;
+      border-bottom: 1px solid #E2E8F0;
+      font-size: 0.8rem;
+      font-weight: 500;
+    }
+
+    /* Cabeçalho com o Banner Oficial */
+    .header-banner-wrapper {
+      background-color: #020617;
+      width: 100%;
+      border-bottom: 3px solid #00c3ff;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+    .header-banner-img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Barra de Navegação Rápida */
+    .nav-actions-bar {
+      background-color: #0b192c;
+      padding: 12px 16px;
+      border-bottom: 1px solid #1e3a5f;
+    }
+
+    /* Títulos de Seção */
+    .section-title {
+      position: relative;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+      font-weight: 700;
+      color: #0F172A;
+    }
+    .section-title::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 48px;
+      height: 4px;
+      border-radius: var(--laursa-radius-sm);
+      background-color: var(--laursa-primary-default);
+    }
+
+    /* Abas de Navegação por Dia */
+    .nav-pills-dias .nav-link {
+      background-color: #FFFFFF;
+      color: #0F172A;
+      border: 1px solid #E2E8F0;
+      font-weight: 700;
+      padding: 12px 20px;
+      border-radius: var(--laursa-radius-md);
+      transition: all 0.2s ease;
+      box-shadow: var(--laursa-elevation-1);
+    }
+    .nav-pills-dias .nav-link:hover {
+      background-color: #F1F5F9;
+      color: var(--laursa-primary-dark);
+    }
+    .nav-pills-dias .nav-link.active {
+      background-color: var(--laursa-primary-dark);
+      color: #FFFFFF;
+      border-color: var(--laursa-primary-dark);
+      box-shadow: var(--laursa-elevation-2);
+    }
+
+    /* Tabela LaUrsa */
+    .table-laursa {
+      border-radius: var(--laursa-radius-md);
+      overflow: hidden;
+      border: 1px solid #E2E8F0;
+      background: #FFFFFF;
+      box-shadow: var(--laursa-elevation-1);
+    }
+    .table-laursa th {
+      background-color: var(--laursa-primary-dark);
+      color: #FFFFFF;
+      font-weight: 700;
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 14px 16px;
+      border: none;
+    }
+    .table-laursa td {
+      padding: 14px 16px;
+      border-bottom: 1px solid #F1F5F9;
+      font-size: 0.92rem;
+    }
+
+    /* Badges dos Polos e Locais */
+    .badge-polo-acp { background-color: #0d6efd; color: #fff; }
+    .badge-polo-trf { background-color: #6f42c1; color: #fff; }
+    .badge-polo-senac { background-color: #fd7e14; color: #fff; }
+    .badge-polo-astronomia { background-color: #198754; color: #fff; }
+
+    /* Cards de Participantes Padronizados */
+    .card-speaker {
+      border: 1px solid #E2E8F0;
+      border-radius: var(--laursa-radius-lg);
+      background: #FFFFFF;
+      box-shadow: var(--laursa-elevation-1);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .card-speaker:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--laursa-elevation-2);
+    }
+    .speaker-avatar {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border: 3px solid var(--laursa-primary-shine);
+      border-radius: 50%;
+    }
+    .speaker-name {
+      font-size: 0.98rem;
+      line-height: 1.25;
+      min-height: 42px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .speaker-bio {
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: #475569;
+      min-height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .footer-space-official {
+      background: #020617;
+      color: #FFFFFF;
+      border-top: 1px solid #1E293B;
+      padding: 28px 16px;
+    }
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Barra Superior do Governo -->
+  <div class="barra-governo d-flex align-items-center px-4">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2">
+        <a href="http://localhost:8080/" class="text-decoration-none fw-bold" style="color: var(--laursa-primary-dark);">
+          <i class="bi bi-arrow-left me-1"></i> PREFEITURA DO RECIFE
+        </a>
+        <span class="text-muted d-none d-sm-inline">• GO Recife</span>
+      </div>
+      <span class="text-secondary small">REC'N'PLAY 2026 • Trilha Espacial</span>
+    </div>
+  </div>
+
+  <!-- Cabeçalho Oficial -->
+  <header class="header-banner-wrapper">
+    <img src="./eventos_files/banner_header.png" alt="Arena GO Recife Space Tech - REC'N'PLAY 2026" class="header-banner-img">
+  </header>
+
+  <!-- Barra de Ações Rápidas -->
+  <div class="nav-actions-bar text-center">
+    <div class="container d-flex justify-content-center gap-3 flex-wrap">
+      <a href="http://localhost:8080/" class="btn btn-outline-light btn-sm px-3 py-2" style="border-radius: var(--laursa-radius-md);">
+        <i class="bi bi-house-door me-1"></i> Início (Estratégia)
+      </a>
+      <a href="http://localhost:8080/eventos#grade-dias" class="btn btn-warning fw-bold btn-sm px-4 py-2" style="border-radius: var(--laursa-radius-md);">
+        <i class="bi bi-calendar3 me-1"></i> Grade por Dia
+      </a>
+      <a href="http://localhost:8080/eventos#circuitos-fixos" class="btn btn-outline-light btn-sm px-3 py-2" style="border-radius: var(--laursa-radius-md);">
+        <i class="bi bi-telescope me-1"></i> Circuitos Fixos
+      </a>
+      <a href="http://localhost:8080/eventos#participantes" class="btn btn-outline-light btn-sm px-3 py-2" style="border-radius: var(--laursa-radius-md);">
+        <i class="bi bi-people me-1"></i> Participantes
+      </a>
+    </div>
+  </div>
+
+  <!-- Conteúdo Principal -->
+  <main class="container my-5 flex-grow-1">
+
+    <!-- Grade Completa por Dia (Filtro por Abas) -->
+    <section class="mb-5" id="grade-dias">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+        <div>
+          <h2 class="h4 section-title mb-1">
+            <i class="bi bi-calendar-week me-2" style="color: var(--laursa-primary-default);"></i>Programação Diária Completa
+          </h2>
+          <p class="text-muted small">Programação oficial da Arena GO Recife Space Tech transcrita fielmente da planilha oficial.</p>
+        </div>
+      </div>
+
+      <!-- Abas dos 4 Dias -->
+      <ul class="nav nav-pills nav-pills-dias mb-4 gap-2 flex-wrap" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-dia11-tab" data-bs-toggle="pill" data-bs-target="#pills-dia11" type="button" role="tab" aria-selected="true">
+            <i class="bi bi-calendar-event me-1"></i> 11/11 (Quarta-feira)
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-dia12-tab" data-bs-toggle="pill" data-bs-target="#pills-dia12" type="button" role="tab" aria-selected="false" tabindex="-1">
+            <i class="bi bi-calendar-event me-1"></i> 12/11 (Quinta-feira)
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-dia13-tab" data-bs-toggle="pill" data-bs-target="#pills-dia13" type="button" role="tab" aria-selected="false" tabindex="-1">
+            <i class="bi bi-calendar-event me-1"></i> 13/11 (Sexta-feira)
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-dia14-tab" data-bs-toggle="pill" data-bs-target="#pills-dia14" type="button" role="tab" aria-selected="false" tabindex="-1">
+            <i class="bi bi-calendar-event me-1"></i> 14/11 (Sábado)
+          </button>
+        </li>
+      </ul>
+
+      <!-- Conteúdo das Abas -->
+      <div class="tab-content" id="pills-tabContent">
+
+        <!-- DIA 11/11 (QUARTA-FEIRA) -->
+        <div class="tab-pane fade show active" id="pills-dia11" role="tabpanel" aria-labelledby="pills-dia11-tab">
+          <div class="table-responsive table-laursa">
+            <table class="table table-hover align-middle mb-0">
+              <thead>
+                <tr>
+                  <th style="width: 150px;">Horário</th>
+                  <th>Local</th>
+                  <th>Espaço</th>
+                  <th>Atividade / Painel</th>
+                  <th>Tema</th>
+                  <th>Título</th>
+                </tr>
+              </thead>
+              <tbody>                             
+                <tr>
+                  <td class="fw-bold text-primary font-monospace">9 às 12h<br>15 às 18 h</td>
+                  <td><span class="badge badge-polo-acp">ASSOCIAÇÃO COMERCIAL DE PERNAMBUCO - ACP</span></td>
+                  <td>TERREO</td>
+                  <td class="fw-semibold">Sala Terreo: Planetário (SAR)</td>
+                  <td>Paineis de discussão sobre a conexão entre Recife, principal polo em transformação digital da américa latina e o setor espacial, com participantes locais, regionais e nacional.</td>
+                  <td>Recife Space Tech: conexões para o futuro</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-primary font-monospace">10 às 12 h</td>
+                  <td><span class="badge badge-polo-trf">AUDITÓRIO TRF-5</span></td>
+                  <td>Auditório</td>
+                  <td class="fw-semibold">Painel: O papel do jovem Recifense na revolução que envolve tecnologia digital, setor espacial e performance da cidade</td>
+                  <td>Discussão sobre direito e diplomacia espacial</td>
+                  <td>Direito e Diplomacia espacial</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-primary font-monospace">10 às 12 h</td>
+                  <td><span class="badge badge-polo-acp">ASSOCIAÇÃO COMERCIAL DE PERNAMBUCO - ACP</span></td>
+                  <td>SALA 2: RODA DE CONVERSA 1º Andar</td>
+                  <td class="fw-semibold">Viva Estácio Space Tech</td>
+                  <td>Paineis de discussão sobre a conexão entre Recife, principal polo em transformação digital da américa latina e o setor espacial, com participantes locais, regionais e nacional.</td>
+                  <td>Recife Space Tech: conexões para o futuro</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-primary font-monospace">13h - 15h</td>
+                  <td><span class="badge badge-polo-senac">SENAC 235</span></td>
+                  <td>Auditório SENAC (Prédio Senac Apolo, 235)</td>
+                  <td class="fw-semibold">INOVA POLI - Inovação Aberta na Escola Politécnica da Universidade de Pernambuco.<br><span class="text-muted small">Professor responsável: Genésio Gomes | Oficineiros: UPE</span></td>
+                  <td>Desenvolver paineis, oficinas e atividades que tragam integrantes dos ecossistemas que fazem parte do programa RECIFE SPACE TECH.</td>
+                  <td>A gente se vê amanhã: Recife Space Tech</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-primary font-monospace">14 às 16 h</td>
+                  <td><span class="badge badge-polo-acp">ASSOCIAÇÃO COMERCIAL DE PERNAMBUCO - ACP</span></td>
+                  <td>SALA 1: PAINEL DE DEBATE 1º Andar</td>
+                  <td class="fw-semibold">Painel: Resiliência urbana, tecnologia digital, dados satelitais e conectividade</td>
+                  <td>Paineis de discussão sobre a conexão entre Recife, principal polo em transformação digital da américa latina e o setor espacial, com participantes locais, regionais e nacional.</td>
+                  <td>Recife Space Tech: conexões para o futuro</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-primary font-monospace">14 às 16 h</td>
+                  <td><span class="badge badge-polo-acp">ASSOCIAÇÃO COMERCIAL DE PERNAMBUCO - ACP</span></td>
+                  <td>SALA 2: RODA DE CONVERSA 1º Andar</td>
+                  <td class="fw-semibold">FORAP</td>
+                  <td>Paineis de discussão sobre a conexão entre Recife, principal polo em transformação digital da américa latina e o setor espacial, com participantes locais, regionais e nacional.</td>
+                  <td>Recife Space Tech: conexões para o futuro</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- DIA 12/11 (QUINTA-FEIRA) -->
+        <div class="tab-pane fade" id="pills-dia12" role="tabpanel" aria-labelledby="pills-dia12-tab">
+          <div class="table-responsive table-laursa">
+            <table class="table table-hover align-middle mb-0">
+              <thead>
+                <tr>
+                  <th style="width: 150px;">Horário</th>
+                  <th>Local</th>
+                  <th>Espaço</th>
+                  <th>Atividade / Painel</th>
+                  <th>Tema</th>
+                  <th>Título</th>
+                </tr>
+              </thead>
+              <tbody>                
+                <tr>
+                  <td class="fw-bold text-primary font-monospace">9 às 12 horas</td>
+                  <td><span class="badge badge-polo-senac">ESPAÇO 235 SENAC</span></td>
+                  <td>Hall do SENAC 235 (Prédio Senac Apolo, 235)</td>
+                  <td class="fw-semibold">Ideathon “O Pilar do futuro Recife”<br><span class="text-muted small">Oficineiros: Prefeitura Coreto</span></td>
+                  <td>Participação social, com um IdeaTom com a comunidade do Pilar, onde vamos levantar os principais desafios que a comunidade enfrenta, na visão dos moradores.</td>
+                  <td>O Pilar do futuro</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-primary font-monospace">9 às 12h<br>15 às 18 h</td>
+                  <td><span class="badge badge-polo-acp">ASSOCIAÇÃO COMERCIAL DE PERNAMBUCO - ACP</span></td>
+                  <td>TERREO</td>
+                  <td class="fw-semibold">Sala Terreo: Planetário (SAR)</td>
+                  <td>Paineis de discussão sobre a conexão entre Recife, principal polo em transformação digital da américa latina e o setor espacial, com participantes locais, regionais e nacional.</td>
+                  <td>Recife Space Tech: conexões para o futuro</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-primary font-monospace">10 às 12 h</td>
+                  <td><span class="badge badge-polo-trf">AUDITÓRIO TRF-5</span></td>
+                  <td>Auditório</td>
+                  <td class="fw-semibold">Painel: A urgência do debate sobre direito e diplomacia espacial no Brasil</td>
+                  <td>Discussão sobre direito e diplomacia espacial</td>
+                  <td>Direito e Diplomacia espacial</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- DIA 13/11 (SEXTA-FEIRA) -->
+        <div class="tab-pane fade" id="pills-dia13" role="tabpanel" aria-labelledby="pills-dia13-tab">
+          <div class="table-responsive table-laursa">
+            <table class="table table-hover align-middle mb-0">
+              <thead>
+                <tr>
+                  <th style="width: 150px;">Horário</th>
+                  <th>Local</th>
+                  <th>Espaço</th>
+                  <th>Atividade / Painel</th>
+                  <th>Tema</th>
+                  <th>Título</th>
+                </tr>
+              </thead>
+              <tbody>               
+                
+                <tr>
+                  <td class="fw-bold text-primary font-monospace">9 às 12h<br>15 às 18 h</td>
+                  <td><span class="badge badge-polo-acp">ASSOCIAÇÃO COMERCIAL DE PERNAMBUCO - ACP</span></td>
+                  <td>TERREO</td>
+                  <td class="fw-semibold">Sala Terreo: Planetário (SAR)</td>
+                  <td>Paineis de discussão sobre a conexão entre Recife, principal polo em transformação digital da américa latina e o setor espacial, com participantes locais, regionais e nacional.</td>
+                  <td>Recife Space Tech: conexões para o futuro</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-primary font-monospace">10 às 12 h</td>
+                  <td><span class="badge badge-polo-trf">AUDITÓRIO TRF-5</span></td>
+                  <td>Auditório</td>
+                  <td class="fw-semibold">Painel: Transformação digital, Deep Tech e Inovação industrial como competências da cidade do Recife num olhar sistêmico de futuro.</td>
+                  <td>Discussão sobre direito e diplomacia espacial</td>
+                  <td>Direito e Diplomacia espacial</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-primary font-monospace">10 às 12 h</td>
+                  <td><span class="badge badge-polo-acp">ASSOCIAÇÃO COMERCIAL DE PERNAMBUCO - ACP</span></td>
+                  <td>SALA 2: RODA DE CONVERSA 1º Andar</td>
+                  <td class="fw-semibold">O Futuro da Educação e as Tecnologias do futuro</td>
+                  <td>Paineis de discussão sobre a conexão entre Recife, principal polo em transformação digital da américa latina e o setor espacial, com participantes locais, regionais e nacional.</td>
+                  <td>Recife Space Tech: conexões para o futuro</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-primary font-monospace">13h - 15h</td>
+                  <td><span class="badge badge-polo-senac">CARRETA SMART LAB</span></td>
+                  <td>-</td>
+                  <td class="fw-semibold">Oficina Interativa CubeSat: Monte e Controle um Satélite<br><span class="text-muted small">Oficineiros: UPE</span></td>
+                  <td>Desenvolver paineis, oficinas e atividades que tragam integrantes dos ecossistemas que fazem parte do programa RECIFE SPACE TECH.</td>
+                  <td>A gente se vê amanhã: Recife Space Tech</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-primary font-monospace">14 às 16 h</td>
+                  <td><span class="badge badge-polo-acp">ASSOCIAÇÃO COMERCIAL DE PERNAMBUCO - ACP</span></td>
+                  <td>SALA 1: PAINEL DE DEBATE 1º Andar</td>
+                  <td class="fw-semibold">Painel: Desafios, perspectivas e oportunidades dos próximos 25 anos na interface entre transformação digital e serviços baseados em espaço</td>
+                  <td>Paineis de discussão sobre a conexão entre Recife, principal polo em transformação digital da américa latina e o setor espacial, com participantes locais, regionais e nacional.</td>
+                  <td>Recife Space Tech: conexões para o futuro</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-primary font-monospace">14 às 16 h</td>
+                  <td><span class="badge badge-polo-acp">ASSOCIAÇÃO COMERCIAL DE PERNAMBUCO - ACP</span></td>
+                  <td>SALA 2: RODA DE CONVERSA 1º Andar</td>
+                  <td class="fw-semibold">FORAP</td>
+                  <td>Paineis de discussão sobre a conexão entre Recife, principal polo em transformação digital da américa latina e o setor espacial, com participantes locais, regionais e nacional.</td>
+                  <td>Recife Space Tech: conexões para o futuro</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- DIA 14/11 (SÁBADO) -->
+        <div class="tab-pane fade" id="pills-dia14" role="tabpanel" aria-labelledby="pills-dia14-tab">
+          <div class="table-responsive table-laursa">
+            <table class="table table-hover align-middle mb-0">
+              <thead>
+                <tr>
+                  <th style="width: 150px;">Horário</th>
+                  <th>Local</th>
+                  <th>Espaço</th>
+                  <th>Atividade / Painel</th>
+                  <th>Tema</th>
+                  <th>Título</th>
+                </tr>
+              </thead>
+              <tbody>                
+                <tr>
+                  <td class="fw-bold text-primary font-monospace">09h - 10h</td>
+                  <td><span class="badge badge-polo-senac">CARRETA SMART LAB</span></td>
+                  <td>-</td>
+                  <td class="fw-semibold">DeltaV Drones – Escola Politécnica de Pernambuco (POLI/UPE)<br><span class="text-muted small">Professor responsável: George Azevedo | Oficineiros: UPE</span></td>
+                  <td>Desenvolver paineis, oficinas e atividades que tragam integrantes dos ecossistemas que fazem parte do programa RECIFE SPACE TECH.</td>
+                  <td>A gente se vê amanhã: Recife Space Tech</td>
+                </tr>
+
+                <tr>
+                  <td class="fw-bold text-primary font-monospace">9 às 12h<br>15 às 18 h</td>
+                  <td><span class="badge badge-polo-acp">ASSOCIAÇÃO COMERCIAL DE PERNAMBUCO - ACP</span></td>
+                  <td>TERREO</td>
+                  <td class="fw-semibold">Sala Terreo: Planetário (SAR)</td>
+                  <td>Paineis de discussão sobre a conexão entre Recife, principal polo em transformação digital da américa latina e o setor espacial, com participantes locais, regionais e nacional.</td>
+                  <td>Recife Space Tech: conexões para o futuro</td>
+                </tr>
+                <tr>
+                  <td class="fw-bold text-primary font-monospace">10 às 12 h</td>
+                  <td><span class="badge badge-polo-acp">ASSOCIAÇÃO COMERCIAL DE PERNAMBUCO - ACP</span></td>
+                  <td>SALA 1: PAINEL DE DEBATE 1º Andar</td>
+                  <td class="fw-semibold">Painel: Papel dos ecossistemas territoriais em tecnologias digitais para enfrentar os desafios no setor espacial</td>
+                  <td>Paineis de discussão sobre a conexão entre Recife, principal polo em transformação digital da américa latina e o setor espacial, com participantes locais, regionais e nacional.</td>
+                  <td>Recife Space Tech: conexões para o futuro</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Circuitos Contínuos (11 a 14 de Novembro) -->
+    <section class="mb-5" id="circuitos-fixos">
+      <h2 class="h4 section-title">
+        <i class="bi bi-compass me-2" style="color: var(--laursa-going-dark);"></i>Circuitos Contínuos (11 a 14 de Novembro)
+      </h2>
+      <div class="row g-4">
+        
+        <!-- MARCO ZERO E PRAÇA DO ARSENAL -->
+        <div class="col-lg-6">
+          <div class="card h-100 border-0 p-4 shadow-sm bg-white" style="border-radius: var(--laursa-radius-lg); border-left: 5px solid var(--laursa-going-default) !important;">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <span class="badge bg-danger">MARCO ZERO E PRAÇA DO ARSENAL</span>
+              <span class="badge bg-light text-dark border">Manhã / Tarde</span>
+            </div>
+            <h3 class="h5 fw-bold text-dark mb-1">Ciências, foguetes e imaginação</h3>
+            <p class="text-secondary small mb-3"><strong>Tema:</strong> Atividade de entreterimento para conectar com o tema espacial</p>
+            
+            <div class="p-3 bg-light rounded-2 border">
+              <h4 class="h6 fw-bold text-dark mb-2">Programação:</h4>
+              <ul class="list-unstyled small mb-0">
+                <li class="mb-1">• <strong>11/11/2026 (QUA):</strong> Manhã e Tarde - Oficina de Lançamento Foguetes</li>
+                <li class="mb-1">• <strong>12/11/2026 (QUI):</strong> Manhã e Tarde - Oficina de Lançamento Foguetes</li>
+                <li class="mb-1">• <strong>13/11/2026 (SEX):</strong> Manhã e Tarde - Oficina de Lançamento Foguetes</li>
+                <li>• <strong>14/11/2026 (SÁB):</strong> Manhã - Oficina de Lançamento Foguetes</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- TORRE MALAKOF -->
+        <div class="col-lg-6">
+          <div class="card h-100 border-0 p-4 shadow-sm bg-white" style="border-radius: var(--laursa-radius-lg); border-left: 5px solid var(--laursa-primary-default) !important;">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <span class="badge badge-polo-astronomia">TORRE MALAKOF</span>
+              <span class="badge bg-light text-dark border">Manhã / Tarde</span>
+            </div>
+            <h3 class="h5 fw-bold text-dark mb-1">Atividades de oficinas e extensão relacionadas à Astronomia</h3>
+            <p class="text-secondary small mb-3"><strong>Espaço:</strong> Salas do Torre Malakof</p>
+            
+            <div class="p-3 bg-light rounded-2 border">
+              <h4 class="h6 fw-bold text-dark mb-2">Atividades:</h4>
+              <ul class="list-unstyled small mb-0">
+                <li class="mb-2">- Observação astronômica com telescópios, máscaras solares e aplicativos para celular;</li>
+                <li class="mb-2">- Oficina de montagem e lançamento de foguetes educativos;</li>
+                <li class="mb-2">- Palestras temáticas sobre Astronomia e Ciências Espaciais;</li>
+                <li class="mb-2">- Representação teatral sobre episódios e personagens da Astronomia;</li>
+                <li>- Turismo Astronômico pelo observatório de Jorge Marcgrave (patrono da - Astronomia de Pernambuco) e pela Torre Malakoff de Dom Pedro II (patrono da Astronomia no Brasil).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Participantes e Facilitadores -->
+    <section class="mb-5" id="participantes">
+      <h2 class="h4 section-title">
+        <i class="bi bi-people-fill me-2" style="color: var(--laursa-primary-default);"></i>Participantes e Facilitadores
+      </h2>
+      <p class="text-muted">Especialistas e líderes institucionais presentes na trilha oficial da Arena GO Recife Space Tech.</p>
+      
+      <div class="row g-4">
+        
+        <!-- Participante 1: José Roberto Ferreira Guerra -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 card-speaker p-4 text-center">
+            <div class="d-flex justify-content-center mb-3">
+              <img src="./eventos_files/JOSE_ROBERTO.jpeg" alt="José Roberto Ferreira Guerra" class="speaker-avatar">
+            </div>
+            <div class="speaker-name">
+              <h3 class="h6 fw-bold text-dark mb-0">José Roberto Ferreira Guerra</h3>
+            </div>
+            <div class="mb-3">
+              <span class="badge bg-primary-subtle text-primary fw-bold" style="border-radius: var(--laursa-radius-sm);">Diretor do Parque.TeC UFPE</span>
+            </div>
+            <div class="speaker-bio">
+              <p class="mb-0">
+                Diretor do Parque Tecnológico e Científico da UFPE e Professor do DCA e PPHTur/CCSA. Possui mais de uma década de experiência em inovação e coordenação de projetos voltados ao empreendedorismo tecnológico.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Participante 2: João Carlos Costa -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 card-speaker p-4 text-center">
+            <div class="d-flex justify-content-center mb-3">
+              <img src="./eventos_files/joao_carlos.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Joao+Carlos+Costa&amp;background=2957A3&amp;color=fff&amp;size=150'" alt="João Carlos Costa" class="speaker-avatar">
+            </div>
+            <div class="speaker-name">
+              <h3 class="h6 fw-bold text-dark mb-0">João Carlos Costa</h3>
+            </div>
+            <div class="mb-3">
+              <span class="badge bg-primary-subtle text-primary fw-bold" style="border-radius: var(--laursa-radius-sm);">Assessor Especial Secti/Emprel</span>
+            </div>
+            <div class="speaker-bio">
+              <p class="mb-0">
+                Lidera projetos estratégicos phygital como Arena Go Recife e Recife Space Tech. Especialista em gestão pública e orquestração de ecossistemas inovadores, com formação executiva em Harvard e doutorando em Administração.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Participante 3: Dr. Rogério Pontes -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 card-speaker p-4 text-center">
+            <div class="d-flex justify-content-center mb-3">
+              <img src="./eventos_files/rogerio_pontes.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Rogerio+Pontes&amp;background=0A6639&amp;color=fff&amp;size=150'" alt="Dr. Rogério Pontes" class="speaker-avatar">
+            </div>
+            <div class="speaker-name">
+              <h3 class="h6 fw-bold text-dark mb-0">Dr. Rogério Pontes</h3>
+            </div>
+            <div class="mb-3">
+              <span class="badge bg-success-subtle text-success fw-bold" style="border-radius: var(--laursa-radius-sm);">Gerente Geral CT&amp;I PARQTEL</span>
+            </div>
+            <div class="speaker-bio">
+              <p class="mb-0">
+                Doutor em Engenharia Mecânica e Professor Associado da POLI/UPE e PPGES. Atua na gerência de CT&amp;I da SECTI-PE, liderando projetos de Pesquisa, Desenvolvimento e Inovação voltados para a Indústria 4.0.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Participante 4: Dr. Thiago Carvalho -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 card-speaker p-4 text-center">
+            <div class="d-flex justify-content-center mb-3">
+              <img src="./eventos_files/thiago_carvalho.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Thiago+Carvalho&amp;background=3E82F4&amp;color=fff&amp;size=150'" alt="Dr. Thiago Carvalho" class="speaker-avatar">
+            </div>
+            <div class="speaker-name">
+              <h3 class="h6 fw-bold text-dark mb-0">Dr. Thiago Carvalho</h3>
+            </div>
+            <div class="mb-3">
+              <span class="badge bg-info-subtle text-dark fw-bold" style="border-radius: var(--laursa-radius-sm);">Direito Espacial OAB/PE</span>
+            </div>
+            <div class="speaker-bio">
+              <p class="mb-0">
+                Mestre em Direito pela UFPE e Presidente da Comissão de Direito Aeronáutico e Espacial da OAB/PE. Fundador da Academia do Espaço, com destacada atuação jurídica e regulatória no setor aeroespacial.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Participante 5: Dra. Andréa Berenguer -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 card-speaker p-4 text-center">
+            <div class="d-flex justify-content-center mb-3">
+              <img src="./eventos_files/andrea_berenguer.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Andrea+Berenguer&amp;background=6F42C1&amp;color=fff&amp;size=150'" alt="Dra. Andréa Berenguer" class="speaker-avatar">
+            </div>
+            <div class="speaker-name">
+              <h3 class="h6 fw-bold text-dark mb-0">Dra. Andréa Berenguer</h3>
+            </div>
+            <div class="mb-3">
+              <span class="badge bg-purple-subtle text-dark fw-bold" style="background:#e8d9ff; border-radius: var(--laursa-radius-sm);">Docente IFPE / Recife Space</span>
+            </div>
+            <div class="speaker-bio">
+              <p class="mb-0">
+                Doutora em Ciências Jurídicas e Professora do IFPE com 30 anos de docência em Direito e Turismo. Coordenadora de extensão e colaboradora da política pública municipal Recife Space e do Ecossistema Oeste Inovador.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Participante 6: Ascânio José Morais de Melo França -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 card-speaker p-4 text-center">
+            <div class="d-flex justify-content-center mb-3">
+              <img src="./eventos_files/ascanio_frança.png" onerror="this.src='https://ui-avatars.com/api/?name=Ascanio+Franca&amp;background=11B163&amp;color=fff&amp;size=150'" alt="Ascânio José Morais de Melo França" class="speaker-avatar">
+            </div>
+            <div class="speaker-name">
+              <h3 class="h6 fw-bold text-dark mb-0">Ascânio José Morais de Melo França</h3>
+            </div>
+            <div class="mb-3">
+              <span class="badge bg-success-subtle text-success fw-bold" style="border-radius: var(--laursa-radius-sm);">Fundador e CEO da FBR Digital</span>
+            </div>
+            <div class="speaker-bio">
+              <p class="mb-0">
+                Fundador e CEO da FBR Digital e sócio-fundador da Lumos Academy. Atua como 1º Vice-presidente da ACIC, Embaixador do Porto Digital, Membro do Advisory Board do NERD e Conselheiro do Tapioca Valley.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Participante 7: Prof. George Azevedo -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 card-speaker p-4 text-center">
+            <div class="d-flex justify-content-center mb-3">
+              <img src="./eventos_files/GEORGE_AZEVEDO.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=George+Azevedo&amp;background=0A6639&amp;color=fff&amp;size=150'" alt="Prof. George Azevedo" class="speaker-avatar">
+            </div>
+            <div class="speaker-name">
+              <h3 class="h6 fw-bold text-dark mb-0">Prof. George Azevedo</h3>
+            </div>
+            <div class="mb-3">
+              <span class="badge bg-success-subtle text-success fw-bold" style="border-radius: var(--laursa-radius-sm);">Coordenador Setorial POLI/UPE</span>
+            </div>
+            <div class="speaker-bio">
+              <p class="mb-0">
+                Doutor em Engenharia da Computação e docente da POLI/UPE. Atua em controle de sistemas dinâmicos, robótica, visão computacional, inteligência artificial, sistemas embarcados e drones voltados a aplicações práticas da engenharia.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Participante 8: Prof. Vladimir Soares -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 card-speaker p-4 text-center">
+            <div class="d-flex justify-content-center mb-3">
+              <img src="./eventos_files/VLADIMIR_SOARES.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Vladimir+Soares&amp;background=2957A3&amp;color=fff&amp;size=150'" alt="Prof. Vladimir Soares" class="speaker-avatar">
+            </div>
+            <div class="speaker-name">
+              <h3 class="h6 fw-bold text-dark mb-0">Prof. Vladimir Soares</h3>
+            </div>
+            <div class="mb-3">
+              <span class="badge bg-primary-subtle text-primary fw-bold" style="border-radius: var(--laursa-radius-sm);">Coordenador LabTel / POLI-UPE</span>
+            </div>
+            <div class="speaker-bio">
+              <p class="mb-0">
+                Doutor em Engenharia Elétrica e Professor Assistente da POLI-UPE. Coordenador do LabTel e orientador da equipe de CubeSats DeltaV Satélites, pesquisando arquiteturas de comunicação para nanossatélites e sensores ópticos.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Participante 9: Prof. Genésio Gomes -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 card-speaker p-4 text-center">
+            <div class="d-flex justify-content-center mb-3">
+              <img src="./eventos_files/GENESIO_GOMES.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Genesio+Gomes&amp;background=0A6639&amp;color=fff&amp;size=150'" alt="Prof. Genésio Gomes" class="speaker-avatar">
+            </div>
+            <div class="speaker-name">
+              <h3 class="h6 fw-bold text-dark mb-0">Prof. Genésio Gomes</h3>
+            </div>
+            <div class="mb-3">
+              <span class="badge bg-success-subtle text-success fw-bold" style="border-radius: var(--laursa-radius-sm);">Coordenador INOVA POLI/UPE</span>
+            </div>
+            <div class="speaker-bio">
+              <p class="mb-0">
+                Doutor em Ciência da Computação (CIn/UFPE), Professor de Empreendedorismo da UPE e coordenador do INOVA POLI/UPE. Fundador do Células Empreendedoras e investidor anjo com prêmios nacionais em inovação aberta.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé Oficial -->
+  <footer class="footer-space-official">
+    <div class="container">
+      <div class="row align-items-center py-2 g-3">
+        <div class="col-md-6 text-center text-md-start">
+          <span class="fw-bold text-white">Conectando jornadas</span>
+          <span class="mx-2 text-secondary d-none d-sm-inline">|</span>
+          <span class="text-info fw-bold">arena GO recife</span>
+        </div>
+        <div class="col-md-6 text-center text-md-end">
+          <div class="d-inline-flex align-items-center gap-2">
+            <span class="text-white small fw-bold">Prefeitura da Cidade do Recife</span>
+            <span class="badge bg-secondary-subtle text-secondary small">EMPREL / CATI</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./eventos_files/bootstrap.bundle.min.js.download"></script>
+
+</body></html>

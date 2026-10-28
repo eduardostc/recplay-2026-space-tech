@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:8080/ -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recife Space Tech | Transformação Estratégica - EMPREL</title>
+
+  <!-- Tipografia Oficial LaUrsa: DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/">
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+  <link href="./index_files/css2" rel="stylesheet">
+
+  <!-- Frameworks Base -->
+  <link href="./index_files/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./index_files/bootstrap-icons.min.css">
+
+  <style>
+    /* DESIGN TOKENS - DESIGN SYSTEM LAURSA (EMPREL) */
+    :root {
+      --laursa-primary-shine: #C4DCFF;
+      --laursa-primary-light: #6EA1F7;
+      --laursa-primary-default: #3E82F4;
+      --laursa-primary-medium: #346DCC;
+      --laursa-primary-dark: #2957A3;
+
+      --laursa-going-default: #FFBC00;
+      --laursa-going-dark: #B88700;
+
+      --laursa-radius-sm: 4px;
+      --laursa-radius-md: 8px;
+      --laursa-radius-lg: 16px;
+      --laursa-elevation-1: 0 4px 8px rgba(0, 0, 0, 0.08);
+      --laursa-elevation-2: 0 8px 16px rgba(0, 0, 0, 0.12);
+
+      --laursa-font: 'DM Sans', sans-serif;
+    }
+
+    body {
+      font-family: var(--laursa-font);
+      background-color: #FFFFFF;
+      color: #1E293B;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Barra Superior Institucional */
+    .barra-governo {
+      height: 38px;
+      background: #FFFFFF;
+      border-bottom: 1px solid #E2E8F0;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+
+    /* Navbar Principal do Portal */
+    .navbar-portal {
+      background-color: #03081A;
+      border-bottom: 2px solid var(--laursa-primary-default);
+    }
+    .navbar-portal .nav-link {
+      color: #CBD5E1;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.5rem 1rem;
+      transition: color 0.2s ease;
+    }
+    .navbar-portal .nav-link:hover,
+    .navbar-portal .nav-link.active {
+      color: #FFFFFF;
+    }
+
+    /* Banner Principal Esticado de Ponta a Ponta */
+    .banner-top-wrapper {
+      background-color: #03081a;
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 2px solid #00c3ff;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    }
+    
+    .banner-top-img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Callout para a rota /eventos */
+    .callout-eventos {
+      background: linear-gradient(135deg, var(--laursa-primary-dark) 0%, var(--laursa-primary-default) 100%);
+      color: #FFFFFF;
+      border-radius: var(--laursa-radius-lg);
+      padding: 24px 32px;
+      box-shadow: var(--laursa-elevation-1);
+    }
+
+    /* Blocos de Conteúdo: Imagem + Texto Grande no Padrão do Google Sites */
+    .bloco-conteudo {
+      padding: 32px 0;
+      border-bottom: 1px solid #F1F5F9;
+    }
+
+    .bloco-img {
+      width: 100%;
+      max-width: 520px;
+      height: auto;
+      border-radius: var(--laursa-radius-md);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      display: block;
+    }
+
+    .bloco-texto {
+      font-size: 1.85rem;
+      font-weight: 400;
+      line-height: 1.35;
+      color: #004b8d;
+      letter-spacing: -0.3px;
+    }
+
+    /* Rodapé Institucional */
+    .footer-oficial {
+      background: #03081A;
+      color: #94A3B8;
+      padding: 36px 16px;
+      border-top: 1px solid #1E293B;
+    }
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Barra Superior do Governo -->
+  <div class="barra-governo d-flex align-items-center px-4">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2">
+        <span class="fw-bold" style="color: var(--laursa-primary-dark);">PREFEITURA DO RECIFE</span>
+        <span class="text-muted d-none d-sm-inline">• EMPREL</span>
+      </div>
+      <span class="text-secondary small fw-medium">Transformação Estratégica • Recife Space Tech</span>
+    </div>
+  </div>
+
+  <!-- Navbar Principal -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-portal py-2 px-4 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="http://localhost:8080/">
+        <span class="text-white">Recife</span>
+        <span class="badge" style="background-color: var(--laursa-primary-default);">Space Tech</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPortal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navPortal">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link active" href="http://localhost:8080/">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="http://localhost:8080/visao-de-futuro">Visão de Futuro</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-warning fw-bold px-3 py-1 btn-sm" href="http://localhost:8080/eventos" style="border-radius: var(--laursa-radius-md);">
+              <i class="bi bi-calendar-event me-1"></i> Programação Rec'n'Play (/eventos)
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BANNER PRINCIPAL (recife_spachetech.png) -->
+  <header class="banner-top-wrapper">
+    <img src="./index_files/recife_spachetech.png" alt="Recife Space Tech - Conectando Recife ao Setor Espacial" class="banner-top-img">
+  </header>
+
+  <!-- Conteúdo Principal -->
+  <main class="container my-5 flex-grow-1" id="conteudo-estrategico">
+
+    <!-- Chamada em destaque para /eventos -->
+    <div class="callout-eventos mb-5">
+      <div class="row align-items-center g-3">
+        <div class="col-lg-8 text-center text-lg-start">
+          <span class="badge bg-warning text-dark fw-bold mb-1 text-uppercase">Participe</span>
+          <h2 class="h4 fw-bold text-white mb-1">Arena GO Recife Space Tech no REC'N'PLAY</h2>
+          <p class="mb-0 text-white-50 small">Consulte as oficinas da Carreta Smart Lab, os painéis da ACP e os palestrantes confirmados.</p>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end">
+          <a href="http://localhost:8080/eventos" class="btn btn-light fw-bold px-4 py-2" style="border-radius: var(--laursa-radius-md); color: var(--laursa-primary-dark);">
+            <i class="bi bi-arrow-right-circle-fill me-1"></i> Acessar /eventos
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bloco 1: Visita AEB ao Porto Digital (com suporte a .jpg e .png) -->
+    <section class="bloco-conteudo">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6 text-center text-lg-start">
+          <img src="./index_files/visita_aeb.png" onerror="this.onerror=null; this.src='/static/visita_aeb.png';" alt="Visita AEB ao Porto Digital em 2025" class="bloco-img mx-auto mx-lg-0">
+        </div>
+        <div class="col-lg-6">
+          <p class="bloco-texto mb-0">
+            Em 2025, a Agência Espacial Brasileira visitou o Porto Digital para falar de projetos atuais e futuros.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bloco 2: Data Tsunami -->
+    <section class="bloco-conteudo">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6 text-center text-lg-start">
+          <img src="./index_files/data_tsunami.png" onerror="this.onerror=null; this.src='/static/data_tsunami.jpg';" alt="Desafio Data Tsunami no Setor Espacial" class="bloco-img mx-auto mx-lg-0">
+        </div>
+        <div class="col-lg-6">
+          <p class="bloco-texto mb-0">
+            Um dos principais desafios do setor espacial é justamente tecnologias digitais e ciências de dados.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bloco 3: Porto Digital 25 Anos -->
+    <section class="bloco-conteudo">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6 text-center text-lg-start">
+          <img src="./index_files/porot_digital_25anos.png" onerror="this.onerror=null; this.src='/static/porot_digital_25anos.jpg';" alt="Porto Digital 25 Anos - Maior Parque Tecnológico" class="bloco-img mx-auto mx-lg-0">
+        </div>
+        <div class="col-lg-6">
+          <p class="bloco-texto mb-0">
+            Recife é o maior parque tecnológico em tecnologias digitais da América Latina.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bloco 4: O Desafio Estrutural -->
+    <section class="bloco-conteudo">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6 text-center text-lg-start">
+          <img src="./index_files/Odesafios.png" alt="O Desafio: Conectar perfil tecnológico com a economia espacial" class="bloco-img mx-auto mx-lg-0">
+        </div>
+        <div class="col-lg-6">
+          <p class="bloco-texto mb-0">
+            Queremos conectar o perfil tecnológico da cidade com a economia espacial para ajudar na solução dos desafios.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Bloco 5: Visão de Futuro 2050 (Exatamente como a página original, sem botões extras) -->
+    <section class="bloco-conteudo border-bottom-0">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-6 text-center text-lg-start">
+          <img src="./index_files/polo.png" alt="Visão de Futuro 2050 - Plataforma Global" class="bloco-img mx-auto mx-lg-0">
+        </div>
+        <div class="col-lg-6">
+          <p class="bloco-texto mb-0">
+            A visão de futuro é Recife como uma plataforma Global de Transformação Digital no setor Espacial até 2050.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé Institucional LaUrsa -->
+  <footer class="footer-oficial">
+    <div class="container text-center">
+      <div class="d-flex justify-content-center align-items-center gap-3 mb-2 flex-wrap">
+        <span class="text-white fw-bold">Prefeitura da Cidade do Recife</span>
+        <span>•</span>
+        <span class="text-light">EMPREL</span>
+        <span>•</span>
+        <span class="text-light">Recife Space Tech</span>
+      </div>      
+    </div>
+  </footer>
+
+  <script src="./index_files/bootstrap.bundle.min.js.download"></script>
+
+</body></html>
