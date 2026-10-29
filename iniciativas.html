@@ -1,0 +1,423 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recife Space Tech | Iniciativas - EMPREL</title>
+
+  <!-- Tipografia Oficial LaUrsa: DM Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 & Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <style>
+    :root {
+      --laursa-primary-default: #3E82F4;
+      --laursa-primary-dark: #2957A3;
+      --laursa-radius-md: 8px;
+      --laursa-radius-lg: 16px;
+      --laursa-font: 'DM Sans', sans-serif;
+    }
+
+    body {
+      font-family: var(--laursa-font);
+      background-color: #FFFFFF;
+      color: #1E293B;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .barra-governo {
+      height: 38px;
+      background: #FFFFFF;
+      border-bottom: 1px solid #E2E8F0;
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+
+    .navbar-portal {
+      background-color: #03081A;
+      border-bottom: 2px solid var(--laursa-primary-default);
+    }
+    .navbar-portal .nav-link {
+      color: #CBD5E1;
+      font-weight: 500;
+      font-size: 0.95rem;
+      padding: 0.5rem 1rem;
+      transition: color 0.2s ease;
+    }
+    .navbar-portal .nav-link:hover,
+    .navbar-portal .nav-link.active {
+      color: #FFFFFF;
+    }
+
+    .banner-top-wrapper {
+      background-color: #03081a;
+      width: 100%;
+      overflow: hidden;
+      border-bottom: 2px solid #00c3ff;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    }
+    .banner-top-img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      display: block;
+      object-fit: cover;
+    }
+
+    /* Faixas de Seção Estilo Google Sites */
+    .faixa-horizonte {
+      background-color: #196791;
+      color: #FFFFFF;
+      padding: 14px 24px;
+      font-weight: 700;
+      font-size: 1.15rem;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border-radius: var(--laursa-radius-md);
+      margin: 40px 0 30px 0;
+    }
+
+    /* Fases Linha do Tempo */
+    .fase-card {
+      text-align: center;
+      padding: 10px;
+    }
+    .fase-titulo {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: #1E293B;
+      margin-bottom: 2px;
+    }
+    .fase-subtitulo {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: #2957A3;
+      margin-bottom: 6px;
+    }
+    .fase-ano {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #64748B;
+      margin-bottom: 12px;
+    }
+    .fase-img {
+      width: 100%;
+      max-height: 120px;
+      object-fit: contain;
+      margin-bottom: 16px;
+      border-radius: 6px;
+    }
+    .fase-texto {
+      font-size: 0.85rem;
+      color: #475569;
+      line-height: 1.45;
+      text-align: left;
+    }
+
+    /* Títulos e Itens das Metas */
+    .ano-titulo {
+      font-size: 2.2rem;
+      font-weight: 300;
+      color: #166996;
+      letter-spacing: -0.5px;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+    .lista-iniciativas {
+      list-style-type: square;
+      padding-left: 20px;
+    }
+    .lista-iniciativas li {
+      font-size: 0.95rem;
+      color: #334155;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+
+    .bloco-ano {
+      padding: 30px 0;
+      border-bottom: 1px solid #E2E8F0;
+    }
+
+    .box-placeholder-img {
+      background-color: #F8FAFC;
+      border: 2px dashed #CBD5E1;
+      border-radius: 12px;
+      min-height: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #94A3B8;
+    }
+
+    .footer-oficial {
+      background: #03081A;
+      color: #94A3B8;
+      padding: 36px 16px;
+      border-top: 1px solid #1E293B;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <!-- Barra Superior do Governo -->
+  <div class="barra-governo d-flex align-items-center px-4">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center gap-2">
+        <span class="fw-bold" style="color: var(--laursa-primary-dark);">PREFEITURA DO RECIFE</span>
+        <span class="text-muted d-none d-sm-inline">• EMPREL</span>
+      </div>
+      <span class="text-secondary small fw-medium">Iniciativas • Recife Space Tech</span>
+    </div>
+  </div>
+
+  <!-- Navbar Principal -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-portal py-2 px-4 sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="/">
+        <span class="text-white">Recife</span>
+        <span class="badge" style="background-color: var(--laursa-primary-default);">Space Tech</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navPortal">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navPortal">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" href="/">Início</a></li>
+          <li class="nav-item"><a class="nav-link" href="/visao-de-futuro">Visão de Futuro</a></li>
+          <li class="nav-item"><a class="nav-link active" href="/iniciativas">Iniciativas</a></li>
+          <li class="nav-item ms-lg-3">
+            <a class="btn btn-warning fw-bold px-3 py-1 btn-sm" href="/eventos" style="border-radius: var(--laursa-radius-md);">
+              <i class="bi bi-calendar-event me-1"></i> Programação Rec'n'Play (/eventos)
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Banner Superior -->
+  {% comment %} <header class="banner-top-wrapper">
+    <img src="/static/recife_spachetech.png" alt="Recife Space Tech" class="banner-top-img">
+  </header> {% endcomment %}
+
+  <main class="container my-5 flex-grow-1">
+
+    <!-- Título Principal da Página -->
+    <div class="text-center mb-5">
+      <h1 class="display-4 fw-normal" style="color: #166996;">Iniciativas</h1>
+    </div>
+
+    <!-- Timeline das 4 Fases -->    
+    <section class="mb-5 text-center">
+      
+      <!-- Imagem única contínua com a seta, títulos e as 4 fotos -->
+      <div class="mb-4">
+        <img src="/static/fase1.png" alt="Linha do Tempo das Iniciativas - Fases 1 a 4" class="img-fluid" style="max-width: 950px; width: 100%;">
+      </div>
+
+      <!-- As 4 colunas de texto alinhadas exatamente abaixo de cada fase -->
+      <div class="row g-4 justify-content-center text-start" style="max-width: 950px; margin: 0 auto;">
+        
+        <!-- Fase 1 Textos -->
+        <div class="col-6 col-md-3">
+          <ul class="text-secondary small ps-3" style="line-height: 1.5; font-size: 0.82rem;">
+            <li>Conectar ecossistemas e atores do setor</li>
+            <li>Eventos, debates e atividades educacionais</li>
+            <li>Fortalecer parcerias locais e nacionais</li>
+          </ul>
+        </div>
+
+        <!-- Fase 2 Textos -->
+        <div class="col-6 col-md-3">
+          <ul class="text-secondary small ps-3" style="line-height: 1.5; font-size: 0.82rem;">
+            <li>Formação, pesquisa e extensão</li>
+            <li>Projetos de inovação e laboratórios, ciências</li>
+            <li>Apoio a startups e atração de investimentos</li>
+          </ul>
+        </div>
+
+        <!-- Fase 3 Textos -->
+        <div class="col-6 col-md-3">
+          <ul class="text-secondary small ps-3" style="line-height: 1.5; font-size: 0.82rem;">
+            <li>Atração de grandes empresas do setor</li>
+            <li>Cursos e capacitações científicas especializadas</li>
+            <li>Inserção em programas nacionais e internacionais</li>
+          </ul>
+        </div>
+
+        <!-- Fase 4 Textos -->
+        <div class="col-6 col-md-3">
+          <ul class="text-secondary small ps-3" style="line-height: 1.5; font-size: 0.82rem;">
+            <li>Referência global em desenvolvimento e soluções digitais</li>
+            <li>Hub educacional no setor</li>
+            <li>Políticas públicas robustas de incentivo ao setor</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- HORIZONTE DE CURTO PRAZO 2026 - 2028 -->
+    <div class="faixa-horizonte">
+      CONEXÕES: HORIZONTE DE CURTO PRAZO 2026 - 2028
+    </div>
+
+    <!-- 2026: Conexões e mudança de mentalidade -->
+    <section class="bloco-ano">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-5 text-center">
+          <img src="/static/metas_referentes_ano_2026.png" alt="Metas 2026 Recife Space Tech" class="img-fluid rounded-3 shadow">
+        </div>
+        <div class="col-lg-7">
+          <h2 class="ano-titulo">2026: Conexões e mudança de mentalidade</h2>
+          <ul class="lista-iniciativas">
+            <li>Conexões com ecossistema acadêmico, industrial, representações, governos e municipais[cite: 36].</li>
+            <li>Estimular aproximação e projetos em comum entre os três <strong>PARQUES TECNOLÓGICOS</strong> de Recife: Porto Digital, Parqtel e Parqtec[cite: 36].</li>
+            <li>Engajar as 33 universidades relevantes de Recife a se conectar à visão de futuro do Recife Space Tech[cite: 36].</li>
+            <li>Conectar o Sistema S ao programa, conectando iniciativas em comum, como também fomentar a presença no ecossistema do Porto Digital[cite: 36].</li>
+            <li>Estimular eventos de pequeno, médio e grande porte relacionados ao setor espacial na cidade do Recife[cite: 36].</li>
+            <li>Fortalecer o debate sobre diplomacia e <strong>DIREITO ESPACIAL</strong> em Recife, conectando organizações, e atraindo eventos externos para a cidade[cite: 36].</li>
+            <li>Estimular e defender que o antigo aeroclube da cidade se torne um equipamento simbólico que conecte com ciências e setor espacial, atraindo a atenção do cidadão, turista e organizações para a cidade[cite: 36].</li>
+            <li>Tornar o tema espacial relevante e prioritário para os veículos de comunicação local[cite: 36].</li>
+            <li>Levantamento das empresas locais que já prestam serviços na área espacial, para dimensionar o tamanho do setor em nível local[cite: 36].</li>
+            <li>Aproximação de grandes players nacionais e globais que atuam no setor espacial[cite: 36].</li>
+            <li>Dialogar, planejar e acordar com secretarias, órgãos e empresas municipais que possam contribuir para ações locais intersetoriais[cite: 36].</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2027: Conexões, formalização e estímulo a iniciativas -->
+    <section class="bloco-ano">
+      <div class="row g-4">
+        <div class="col-lg-12">
+          <h2 class="ano-titulo">2027: Conexões, formalização e estímulo a iniciativas</h2>
+          <ul class="lista-iniciativas">
+            <li>Lançamento <strong>oficial</strong> do programa como visão de futuro da cidade do Recife[cite: 37].</li>
+            <li>Formalização do programa com portaria, decreto e <strong>lei</strong> que viabilize orçamento para as secretarias envolvidas[cite: 37].</li>
+            <li>Atividades no ano letivo municipal que estimule o interesse pelo tema no Ensino Fundamental[cite: 37].</li>
+            <li>Eventos locais que estimulem o tema espacial[cite: 37].</li>
+            <li>Ações de incentivo ao empreendedorismo tecnológico no setor[cite: 37].</li>
+            <li>Iniciativas de Inovação Aberta com desafios que conectem o potencial da cidade com a carência do setor[cite: 37].</li>
+            <li>Parcerias com as quatro universidades públicas locais para incentivo do tema no ensino, pesquisa e extensão[cite: 37].</li>
+            <li>Legislação municipal regulamentando e criando as diretrizes para empresas de entrega com drones na cidade[cite: 37].</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2028: Conexões, políticas públicas locais de incentivo do tema -->
+    <section class="bloco-ano">
+      <div class="row g-4">
+        <div class="col-lg-12">
+          <h2 class="ano-titulo">2028: Conexões, políticas públicas locais de incentivo do tema</h2>
+          <ul class="lista-iniciativas">
+            <li>Instalação de primeiras empresas de entrega com Drones na cidade do Recife[cite: 37, 38].</li>
+            <li>Infraestrutura local que estimule o turismo e o olhar do país para a cidade do país, em função do tema espacial e astronomia[cite: 37, 38].</li>
+            <li>Parque Eduardo Campos como um centro de ciências espaciais aberto ao cidadão, projetando a imagem da cidade[cite: 37, 38].</li>
+            <li>Programas de incentivo ao empreendedorismo local, desenvolvimento tecnológico da economia em torno do tema[cite: 37, 38].</li>
+            <li>Cursos profissionalizantes, técnicos, graduação e pós-graduação que gerem recursos humanos para o setor[cite: 38].</li>
+            <li>Estímulo às parcerias bilaterais com países da América Latina em torno do tema espacial, na camada Downstream[cite: 38].</li>
+            <li>Criação de política pública de incentivo ao investimento externo em Recife, com benefícios fiscais e desburocratização da implantação de empreendimentos[cite: 38].</li>
+            <li>Criação de linhas públicas de crédito para investimento externo em Recife, dentro do setor[cite: 38].</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- HORIZONTE DE MÉDIO PRAZO 2029 - 2035 -->
+    <div class="faixa-horizonte">
+      DESENVOLVIMENTO: HORIZONTE DE MÉDIO PRAZO 2029 - 2035
+    </div>
+
+    <!-- 2029 -->
+    <section class="bloco-ano">
+      <h2 class="ano-titulo">2029: Estímulo de infraestrutura local de atração de investimento</h2>
+      <ul class="lista-iniciativas">
+        <li>Criação do Gabinete Municipal de fomento ao setor espacial em Recife, vinculado diretamente ao gabinete do Prefeito[cite: 39].</li>
+        <li>Negociação para atração da AEB para a cidade do Recife com um escritório de negócios, ecossistemas e representação[cite: 39].</li>
+        <li>Negociação para atração de uma unidade do INPE para a cidade do Recife com escritório de negócios e conexão com universidades e centro de pesquisas[cite: 39].</li>
+        <li>Engajamento da ampliação da infraestrutura local de internet e conectividade[cite: 39].</li>
+        <li>Incentivo para atração de Turistas Tecnológicos (profissionais de alto impacto remoto)[cite: 39].</li>
+        <li>Fomento da ampliação da rede hoteleira no distrito tecnológico do Porto Digital, ParqTec e Parqtel[cite: 39].</li>
+      </ul>
+    </section>
+
+    <!-- 2030 -->
+    <section class="bloco-ano">
+      <h2 class="ano-titulo">2030: Desenvolvimento de capital intelectual no setor</h2>
+      <ul class="lista-iniciativas">
+        <li>Negociação para atração de unidade do ITA em Recife, com foco 100% em Tecnologias Digitais, ciências da computação e dados[cite: 39, 40].</li>
+        <li>Negociação para operação acadêmica do INPE Recife na área de pesquisa, mestrado e doutorado[cite: 39, 40].</li>
+        <li>Presença de grandes players industriais do setor como Embraer, Visiona, Eletrobras e AVIBRAS em Recife[cite: 40].</li>
+      </ul>
+    </section>
+
+    <!-- 2031 -->
+    <section class="bloco-ano">
+      <h2 class="ano-titulo">2031: Desenvolvimento de parcerias regionais para fortalecer o setor</h2>
+      <ul class="lista-iniciativas">
+        <li>Conexão com Maranhão, Rio Grande do Norte e Ceará para fortalecimento regional no setor[cite: 40, 41].</li>
+        <li>Meta para Instalação dos primeiros cabos submarinos em Recife, viabilizando atração de investimentos de datacenters[cite: 40, 41].</li>
+      </ul>
+    </section>
+
+    <!-- 2032 -->
+    <section class="bloco-ano">
+      <h2 class="ano-titulo">2032: Desenvolvimento de parcerias públicas para serviços baseados em espaço</h2>
+      <ul class="lista-iniciativas">
+        <li>Viabilização de conexão entre universidades, centros de pesquisa e governo para centros de inteligência de dados voltados para serviços críticos do setor público[cite: 41].</li>
+      </ul>
+    </section>
+
+    <!-- HORIZONTE DE LONGO PRAZO 2036 - 2050 -->
+    <div class="faixa-horizonte">
+      LIDERANÇA: HORIZONTE DE LONGO PRAZO 2036 - 2050
+    </div>
+
+    <!-- 2036 & 2037 -->
+    <section class="bloco-ano">
+      <h2 class="ano-titulo">2036: Governança pública em nível estadual para fomento do setor</h2>
+      <ul class="lista-iniciativas">
+        <li>Negociação para Criação da Agência Estadual de fomento ao setor espacial em Pernambuco, em formato de ICT Pública[cite: 42].</li>
+      </ul>
+    </section>
+
+    <section class="bloco-ano border-bottom-0">
+      <h2 class="ano-titulo">2037: Liderança do setor downstream espacial na América Latina</h2>
+      <ul class="lista-iniciativas mb-5">
+        <li>Negociação para criação da Confederação Nacional de Fomento ao setor Espacial[cite: 42].</li>
+      </ul>
+
+      <!-- Banner Impacto 2050 -->
+      <div class="text-center mt-4">
+        <img src="/static/impacto.png" alt="Impacto até 2050: +2000 Empresas, +96 Mil Colaboradores, +US$ 7 Bilhões" class="img-fluid rounded-3 shadow">
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Rodapé Institucional -->
+  <footer class="footer-oficial">
+    <div class="container text-center">
+      <div class="d-flex justify-content-center align-items-center gap-3 mb-2 flex-wrap">
+        <span class="text-white fw-bold">Prefeitura da Cidade do Recife</span>
+        <span>•</span>
+        <span class="text-light">EMPREL</span>
+        <span>•</span>
+        <span class="text-light">Recife Space Tech</span>
+      </div>      
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
