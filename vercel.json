@@ -4,6 +4,7 @@
   "trailingSlash": false,
   "routes": [
     { "src": "/visao-de-futuro", "dest": "/visao-de-futuro.html" },
+    { "src": "/iniciativas", "dest": "/iniciativas.html" },
     { "src": "/eventos", "dest": "/eventos.html" },
     { "src": "/static/(.*)", "dest": "/static/$1" },
     { "src": "/(.*)", "dest": "/$1" }

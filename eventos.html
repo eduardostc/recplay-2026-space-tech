@@ -75,6 +75,15 @@
       border-bottom: 1px solid #1e3a5f;
     }
 
+    /* Banner Chamada Inscrição Oficial */
+    .callout-inscricao {
+      background: linear-gradient(135deg, #0A6639 0%, #11B163 100%);
+      color: #FFFFFF;
+      border-radius: var(--laursa-radius-lg);
+      padding: 24px 32px;
+      box-shadow: var(--laursa-elevation-1);
+    }
+
     /* Títulos de Seção */
     .section-title {
       position: relative;
@@ -216,11 +225,17 @@
 
   <!-- Barra de Ações Rápidas -->
   <div class="nav-actions-bar text-center">
-    <div class="container d-flex justify-content-center gap-3 flex-wrap">
+    <div class="container d-flex justify-content-center align-items-center gap-2 flex-wrap">
       <a href="http://localhost:8080/" class="btn btn-outline-light btn-sm px-3 py-2" style="border-radius: var(--laursa-radius-md);">
         <i class="bi bi-house-door me-1"></i> Início (Estratégia)
       </a>
-      <a href="http://localhost:8080/eventos#grade-dias" class="btn btn-warning fw-bold btn-sm px-4 py-2" style="border-radius: var(--laursa-radius-md);">
+      <a href="http://localhost:8080/visao-de-futuro" class="btn btn-outline-light btn-sm px-3 py-2" style="border-radius: var(--laursa-radius-md);">
+        <i class="bi bi-eye me-1"></i> Visão de Futuro
+      </a>
+      <a href="http://localhost:8080/iniciativas" class="btn btn-outline-light btn-sm px-3 py-2" style="border-radius: var(--laursa-radius-md);">
+        <i class="bi bi-diagram-3 me-1"></i> Iniciativas
+      </a>
+      <a href="http://localhost:8080/eventos#grade-dias" class="btn btn-warning fw-bold btn-sm px-3 py-2" style="border-radius: var(--laursa-radius-md);">
         <i class="bi bi-calendar3 me-1"></i> Grade por Dia
       </a>
       <a href="http://localhost:8080/eventos#circuitos-fixos" class="btn btn-outline-light btn-sm px-3 py-2" style="border-radius: var(--laursa-radius-md);">
@@ -229,11 +244,31 @@
       <a href="http://localhost:8080/eventos#participantes" class="btn btn-outline-light btn-sm px-3 py-2" style="border-radius: var(--laursa-radius-md);">
         <i class="bi bi-people me-1"></i> Participantes
       </a>
+      <!-- BOTÃO DE INSCRIÇÃO SOLICITADO POR JOÃO CARLOS -->
+      <a href="https://register.jalanlive.com/recnplay2026/tickets?pos=415" target="_blank" rel="noopener noreferrer" class="btn btn-success fw-bold btn-sm px-3 py-2 shadow-sm" style="border-radius: var(--laursa-radius-md);">
+        <i class="bi bi-ticket-perforated-fill me-1"></i> Inscreva-se no Festival
+      </a>
     </div>
   </div>
 
   <!-- Conteúdo Principal -->
   <main class="container my-5 flex-grow-1">
+
+    <!-- Card Chamada Destaque Inscrição Oficial REC'N'PLAY -->
+    <div class="callout-inscricao mb-5">
+      <div class="row align-items-center g-3">
+        <div class="col-lg-8 text-center text-lg-start">
+          <span class="badge bg-white text-success fw-bold mb-1 text-uppercase">Entrada Gratuita</span>
+          <h2 class="h4 fw-bold text-white mb-1">Participe do Festival REC'N'PLAY 2026</h2>
+          <p class="mb-0 text-white-50 small">Garanta seu ingresso oficial para acessar todos os polos, palestras e as oficinas práticas da Trilha Espacial.</p>
+        </div>
+        <div class="col-lg-4 text-center text-lg-end">
+          <a href="https://register.jalanlive.com/recnplay2026/tickets?pos=415" target="_blank" rel="noopener noreferrer" class="btn btn-light fw-bold px-4 py-2" style="border-radius: var(--laursa-radius-md); color: var(--laursa-secondary-dark);">
+            <i class="bi bi-ticket-perforated-fill me-1"></i> Fazer Inscrição Oficial
+          </a>
+        </div>
+      </div>
+    </div>
 
     <!-- Grade Completa por Dia (Filtro por Abas) -->
     <section class="mb-5" id="grade-dias">
@@ -287,7 +322,7 @@
                   <th>Título</th>
                 </tr>
               </thead>
-              <tbody>                             
+              <tbody>                                
                 <tr>
                   <td class="fw-bold text-primary font-monospace">9 às 12h<br>15 às 18 h</td>
                   <td><span class="badge badge-polo-acp">ASSOCIAÇÃO COMERCIAL DE PERNAMBUCO - ACP</span></td>
@@ -400,7 +435,6 @@
                 </tr>
               </thead>
               <tbody>               
-                
                 <tr>
                   <td class="fw-bold text-primary font-monospace">9 às 12h<br>15 às 18 h</td>
                   <td><span class="badge badge-polo-acp">ASSOCIAÇÃO COMERCIAL DE PERNAMBUCO - ACP</span></td>
@@ -477,7 +511,6 @@
                   <td>Desenvolver paineis, oficinas e atividades que tragam integrantes dos ecossistemas que fazem parte do programa RECIFE SPACE TECH.</td>
                   <td>A gente se vê amanhã: Recife Space Tech</td>
                 </tr>
-
                 <tr>
                   <td class="fw-bold text-primary font-monospace">9 às 12h<br>15 às 18 h</td>
                   <td><span class="badge badge-polo-acp">ASSOCIAÇÃO COMERCIAL DE PERNAMBUCO - ACP</span></td>
@@ -522,10 +555,10 @@
             <div class="p-3 bg-light rounded-2 border">
               <h4 class="h6 fw-bold text-dark mb-2">Programação:</h4>
               <ul class="list-unstyled small mb-0">
-                <li class="mb-1">• <strong>11/11/2026 (QUA):</strong> Manhã e Tarde - Oficina de Lançamento Foguetes</li>
-                <li class="mb-1">• <strong>12/11/2026 (QUI):</strong> Manhã e Tarde - Oficina de Lançamento Foguetes</li>
-                <li class="mb-1">• <strong>13/11/2026 (SEX):</strong> Manhã e Tarde - Oficina de Lançamento Foguetes</li>
-                <li>• <strong>14/11/2026 (SÁB):</strong> Manhã - Oficina de Lançamento Foguetes</li>
+                <li class="mb-1"><strong>11/11/2026 (QUA):</strong> Manhã e Tarde - Oficina de Lançamento Foguetes</li>
+                <li class="mb-1"><strong>12/11/2026 (QUI):</strong> Manhã e Tarde - Oficina de Lançamento Foguetes</li>
+                <li class="mb-1"><strong>13/11/2026 (SEX):</strong> Manhã e Tarde - Oficina de Lançamento Foguetes</li>
+                <li><strong>14/11/2026 (SÁB):</strong> Manhã - Oficina de Lançamento Foguetes</li>
               </ul>
             </div>
           </div>
@@ -544,11 +577,11 @@
             <div class="p-3 bg-light rounded-2 border">
               <h4 class="h6 fw-bold text-dark mb-2">Atividades:</h4>
               <ul class="list-unstyled small mb-0">
-                <li class="mb-2">- Observação astronômica com telescópios, máscaras solares e aplicativos para celular;</li>
-                <li class="mb-2">- Oficina de montagem e lançamento de foguetes educativos;</li>
-                <li class="mb-2">- Palestras temáticas sobre Astronomia e Ciências Espaciais;</li>
-                <li class="mb-2">- Representação teatral sobre episódios e personagens da Astronomia;</li>
-                <li>- Turismo Astronômico pelo observatório de Jorge Marcgrave (patrono da - Astronomia de Pernambuco) e pela Torre Malakoff de Dom Pedro II (patrono da Astronomia no Brasil).</li>
+                <li class="mb-2">Observação astronômica com telescópios, máscaras solares e aplicativos para celular;</li>
+                <li class="mb-2">Oficina de montagem e lançamento de foguetes educativos;</li>
+                <li class="mb-2">Palestras temáticas sobre Astronomia e Ciências Espaciais;</li>
+                <li class="mb-2">Representação teatral sobre episódios e personagens da Astronomia;</li>
+                <li>Turismo Astronômico pelo observatório de Jorge Marcgrave (patrono da Astronomia de Pernambuco) e pela Torre Malakoff de Dom Pedro II (patrono da Astronomia no Brasil).</li>
               </ul>
             </div>
           </div>
@@ -726,6 +759,26 @@
           </div>
         </div>
 
+        <!-- Participante 10: Adriana Rocha Coutinho -->
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 card-speaker p-4 text-center">
+            <div class="d-flex justify-content-center mb-3">
+              <img src="./eventos_files/adriana_rocha.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Adriana+Rocha&amp;background=6F42C1&amp;color=fff&amp;size=150'" alt="Adriana Rocha Coutinho" class="speaker-avatar">
+            </div>
+            <div class="speaker-name">
+              <h3 class="h6 fw-bold text-dark mb-0">Adriana Rocha Coutinho</h3>
+            </div>
+            <div class="mb-3">
+              <span class="badge bg-purple-subtle text-dark fw-bold" style="background:#e8d9ff; border-radius: var(--laursa-radius-sm);">Docente Unicap / Doutoranda PPGD</span>
+            </div>
+            <div class="speaker-bio">
+              <p class="mb-0">
+                Advogada, professora de Direito Constitucional da Unicap e doutoranda em Cidadania Digital (PPGD-Unicap). Mestra em Direito pela PUC-SP, ex-vice-presidente da OAB-PE e ex-conselheira federal do CFOAB.
+              </p>
+            </div>
+          </div>
+        </div>
+        
         <!-- Participante 9: Prof. Genésio Gomes -->
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
