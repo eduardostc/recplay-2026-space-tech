@@ -1,4 +1,4 @@
-﻿
+{% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -221,7 +221,7 @@
 
   <!-- Cabeçalho Oficial -->
   <header class="header-banner-wrapper">
-    <img src="/static/banner_header.png" alt="Arena GO Recife Space Tech - REC'N'PLAY 2026" class="header-banner-img">
+    <img src="{% static 'banner_header.png' %}" alt="Arena GO Recife Space Tech - REC'N'PLAY 2026" class="header-banner-img">
   </header>
 
   <!-- Barra de Ações Rápidas -->
@@ -285,13 +285,13 @@
         <!-- Área de Downloads dos Documentos Oficiais -->
         <div class="d-flex gap-2 flex-wrap">
           <!-- Botão 1: Baixar / Abrir o PDF de Briefing -->
-          <a href="/static/briefing_arena_space_tech_2026.pdf" target="_blank" download class="btn btn-outline-primary btn-sm fw-bold px-3 py-2 d-inline-flex align-items-center">
+          <a href="{% static 'briefing_arena_space_tech_2026.pdf' %}" target="_blank" download class="btn btn-outline-primary btn-sm fw-bold px-3 py-2 d-inline-flex align-items-center">
             <i class="bi bi-file-earmark-pdf-fill text-danger me-2 fs-6"></i>
             <span>Baixar Briefing do Evento (PDF)</span>
           </a>
 
           <!-- Botão 2: Ver / Baixar o Cartaz da Programação -->
-          <a href="/static/programacao_completa.jpeg" target="_blank" download class="btn btn-outline-secondary btn-sm fw-bold px-3 py-2 d-inline-flex align-items-center">
+          <a href="{% static 'programacao_completa.jpeg' %}" target="_blank" download class="btn btn-outline-secondary btn-sm fw-bold px-3 py-2 d-inline-flex align-items-center">
             <i class="bi bi-image text-primary me-2 fs-6"></i>
             <span>Cartaz da Programação (JPEG)</span>
           </a>
@@ -418,7 +418,8 @@
                   </td>
                   <td class="small text-secondary">
                     Ascânio França, CEO FBR<br>
-                    Prof. Dr. Leonardo, UPE/ INPE
+                    Prof. Dr. Leonardo, UPE/ INPE<br>
+                    Inessa Amâncio - SENAI
                   </td>
                 </tr>
               </tbody>
@@ -457,6 +458,26 @@
                     Ernani - SENAC<br>
                     Lucila - SEDUC, SEPT, Protec<br>
                     Marco Fabricio - Grau Educacional
+                  </td>
+                </tr>
+                
+                <!-- 10 às 12h: TRF-5 / ESMAFE -->
+                <tr>
+                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">10 às 12h</td>
+                  <td>
+                    <span class="badge badge-polo-trf d-block mb-1">TRF-5</span>
+                    <small class="text-muted">TRF-5, auditório da ESMAFE</small>
+                  </td>
+                  <td>TRF-5, UNICAP, UFPE, IFPE, ALADA, Comissão Espacial da OAB-PE</td>
+                  <td class="fw-semibold">
+                    Painel de debate: A urgência do debate sobre direito e diplomacia espacial no Brasil
+                  </td>
+                  <td class="small text-secondary">
+                    Prof.ª Dr.ª Adriana Rocha, Unicap;<br>
+                    Prof. Dr.º Thiago Bezerra, Comissão Espacial OAB-PE;<br>
+                    Prof. Dr.º Torquato Castro Junior, Faculdade de Direito UFPE;<br>
+                    Prof. Dr.ª Andréa Berenguer, IFPE;<br>
+                    Prof. Dr.ª Roxana Corbran, ALADA
                   </td>
                 </tr>
 
@@ -572,7 +593,8 @@
                     Forap: O jovem e o futuro do Recife
                   </td>
                   <td class="small text-secondary">
-                    Maria Izabel - Forap, Rede Cidadã
+                    Maria Izabel - Forap, Rede Cidadã<br>
+                    Lucas Felipe Silva dos Santos - SEST/SENAT
                   </td>
                 </tr>
 
@@ -591,7 +613,8 @@
                     Rafael Figueiredo, Procurador PE;<br>
                     Pedro Carelli (UFPE Oeste Inovador);<br>
                     Manoel Marinho, Poli-UPE;<br>
-                    Prof. Dr. Leonardo Brasileiro
+                    Ricardo Brasileiro - SENAI;<br>
+                    Prof. Dr. Leonardo - POLÍ-UPE
                   </td>
                 </tr>
               </tbody>
@@ -599,7 +622,6 @@
           </div>
         </div>
 
-        <!-- DIA 14/11 (SÁBADO) -->
         <!-- DIA 14/11 (SÁBADO) -->
         <div class="tab-pane fade" id="pills-dia14" role="tabpanel">
           <div class="table-responsive table-laursa">
@@ -671,7 +693,9 @@
                   <td class="fw-semibold">
                     Painel de debate: Papel dos ecossistemas territoriais em tecnologias digitais para enfrentar os desafios no setor espacial
                   </td>
-                  <td class="small text-muted">-</td>
+                  <td class="small text-secondary">
+                    Ricardo Brasileiro, SENAI
+                  </td>
                 </tr>
               </tbody>
             </table>
@@ -749,7 +773,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/JOSE_ROBERTO.jpeg" alt="José Roberto Ferreira Guerra" class="speaker-avatar">
+              <img src="{% static 'JOSE_ROBERTO.jpeg' %}" alt="José Roberto Ferreira Guerra" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">José Roberto Ferreira Guerra</h3>
@@ -769,7 +793,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/joao_carlos.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Joao+Carlos+Costa&background=2957A3&color=fff&size=150'" alt="João Carlos Costa" class="speaker-avatar">
+              <img src="{% static 'joao_carlos.jpeg' %}" onerror="this.src='https://ui-avatars.com/api/?name=Joao+Carlos+Costa&background=2957A3&color=fff&size=150'" alt="João Carlos Costa" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">João Carlos Costa</h3>
@@ -789,7 +813,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/rogerio_pontes.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Rogerio+Pontes&background=0A6639&color=fff&size=150'" alt="Dr. Rogério Pontes" class="speaker-avatar">
+              <img src="{% static 'rogerio_pontes.jpeg' %}" onerror="this.src='https://ui-avatars.com/api/?name=Rogerio+Pontes&background=0A6639&color=fff&size=150'" alt="Dr. Rogério Pontes" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">Dr. Rogério Pontes</h3>
@@ -809,7 +833,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/thiago_carvalho.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Thiago+Carvalho&background=3E82F4&color=fff&size=150'" alt="Dr. Thiago Carvalho" class="speaker-avatar">
+              <img src="{% static 'thiago_carvalho.jpeg' %}" onerror="this.src='https://ui-avatars.com/api/?name=Thiago+Carvalho&background=3E82F4&color=fff&size=150'" alt="Dr. Thiago Carvalho" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">Dr. Thiago Carvalho</h3>
@@ -829,7 +853,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/andrea_berenguer.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Andrea+Berenguer&background=6F42C1&color=fff&size=150'" alt="Dra. Andréa Berenguer" class="speaker-avatar">
+              <img src="{% static 'andrea_berenguer.jpeg' %}" onerror="this.src='https://ui-avatars.com/api/?name=Andrea+Berenguer&background=6F42C1&color=fff&size=150'" alt="Dra. Andréa Berenguer" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">Dra. Andréa Berenguer</h3>
@@ -849,7 +873,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/ascanio_frança.png" onerror="this.src='https://ui-avatars.com/api/?name=Ascanio+Franca&background=11B163&color=fff&size=150'" alt="Ascânio França" class="speaker-avatar">
+              <img src="{% static 'ascanio_frança.png' %}" onerror="this.src='https://ui-avatars.com/api/?name=Ascanio+Franca&background=11B163&color=fff&size=150'" alt="Ascânio França" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">Ascânio França</h3>
@@ -869,7 +893,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/GEORGE_AZEVEDO.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=George+Azevedo&background=0A6639&color=fff&size=150'" alt="Prof. George Azevedo" class="speaker-avatar">
+              <img src="{% static 'GEORGE_AZEVEDO.jpeg' %}" onerror="this.src='https://ui-avatars.com/api/?name=George+Azevedo&background=0A6639&color=fff&size=150'" alt="Prof. George Azevedo" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">Prof. George Azevedo</h3>
@@ -889,7 +913,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/VLADIMIR_SOARES.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Vladimir+Soares&background=2957A3&color=fff&size=150'" alt="Prof. Vladimir Soares" class="speaker-avatar">
+              <img src="{% static 'VLADIMIR_SOARES.jpeg' %}" onerror="this.src='https://ui-avatars.com/api/?name=Vladimir+Soares&background=2957A3&color=fff&size=150'" alt="Prof. Vladimir Soares" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">Prof. Vladimir Soares</h3>
@@ -909,7 +933,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/adriana_rocha.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Adriana+Rocha&background=6F42C1&color=fff&size=150'" alt="Adriana Rocha Coutinho" class="speaker-avatar">
+              <img src="{% static 'adriana_rocha.jpg' %}" onerror="this.src='https://ui-avatars.com/api/?name=Adriana+Rocha&background=6F42C1&color=fff&size=150'" alt="Adriana Rocha Coutinho" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">Adriana Rocha Coutinho</h3>
@@ -929,7 +953,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/GENESIO_GOMES.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Genesio+Gomes&background=0A6639&color=fff&size=150'" alt="Prof. Genésio Gomes" class="speaker-avatar">
+              <img src="{% static 'GENESIO_GOMES.jpeg' %}" onerror="this.src='https://ui-avatars.com/api/?name=Genesio+Gomes&background=0A6639&color=fff&size=150'" alt="Prof. Genésio Gomes" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">Prof. Genésio Gomes</h3>
@@ -949,7 +973,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/marcelo_jose.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Marcelo+Jose+dos+Santos&background=198754&color=fff&size=150'" alt="Marcelo José dos Santos" class="speaker-avatar">
+              <img src="{% static 'marcelo_jose.jpeg' %}" onerror="this.src='https://ui-avatars.com/api/?name=Marcelo+Jose+dos+Santos&background=198754&color=fff&size=150'" alt="Marcelo José dos Santos" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">Marcelo José dos Santos</h3>
@@ -969,7 +993,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/Pedro_camera.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Pedro+Camera&background=3E82F4&color=fff&size=150'" alt="Pedro Câmera" class="speaker-avatar">
+              <img src="{% static 'Pedro_camera.jpeg' %}" onerror="this.src='https://ui-avatars.com/api/?name=Pedro+Camera&background=3E82F4&color=fff&size=150'" alt="Pedro Câmera" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">Pedro Câmera</h3>
@@ -990,7 +1014,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/lucilla_azeved.png" onerror="this.src='https://ui-avatars.com/api/?name=Lucilla+Azevedo&background=2957A3&color=fff&size=150'" alt="Lucilla Azevedo" class="speaker-avatar">
+              <img src="{% static 'lucilla_azeved.png' %}" onerror="this.src='https://ui-avatars.com/api/?name=Lucilla+Azevedo&background=2957A3&color=fff&size=150'" alt="Lucilla Azevedo" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">Lucilla Azevedo</h3>
@@ -1010,7 +1034,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/Simone_Brasil.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Simone+Brasil&background=6F42C1&color=fff&size=150'" alt="Dr.ª Simone Brasil" class="speaker-avatar">
+              <img src="{% static 'Simone_Brasil.jpg' %}" onerror="this.src='https://ui-avatars.com/api/?name=Simone+Brasil&background=6F42C1&color=fff&size=150'" alt="Dr.ª Simone Brasil" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">Dr.ª Simone Brasil</h3>
@@ -1030,7 +1054,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/rafael_Figueiredo.png" onerror="this.src='https://ui-avatars.com/api/?name=Rafael+Figueiredo&background=3E82F4&color=fff&size=150'" alt="Rafael Figueiredo" class="speaker-avatar">
+              <img src="{% static 'rafael_Figueiredo.png' %}" onerror="this.src='https://ui-avatars.com/api/?name=Rafael+Figueiredo&background=3E82F4&color=fff&size=150'" alt="Rafael Figueiredo" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">Rafael Figueiredo</h3>
@@ -1050,7 +1074,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/Roxana_Corbran.png" onerror="this.src='https://ui-avatars.com/api/?name=Roxana+Corbran&background=11B163&color=fff&size=150'" alt="Dr.ª Roxana Corbran" class="speaker-avatar">
+              <img src="{% static 'Roxana_Corbran.png' %}" onerror="this.src='https://ui-avatars.com/api/?name=Roxana+Corbran&background=11B163&color=fff&size=150'" alt="Dr.ª Roxana Corbran" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">Dr.ª Roxana Corbran</h3>
@@ -1070,7 +1094,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/Leonard_Barbosa.png" onerror="this.src='https://ui-avatars.com/api/?name=Leonardo+Barbosa&background=0A6639&color=fff&size=150'" alt="Prof. Dr. Leonardo Barbosa" class="speaker-avatar">
+              <img src="{% static 'Leonard_Barbosa.png' %}" onerror="this.src='https://ui-avatars.com/api/?name=Leonardo+Barbosa&background=0A6639&color=fff&size=150'" alt="Prof. Dr. Leonardo Barbosa" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">Prof. Dr. Leonardo Barbosa</h3>
@@ -1090,7 +1114,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/Jailda_Eulidia.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Jailda+Eulidia&background=6F42C1&color=fff&size=150'" alt="Dr.ª Jailda Eulídia da Silva Pinto" class="speaker-avatar">
+              <img src="{% static 'Jailda_Eulidia.jpeg' %}" onerror="this.src='https://ui-avatars.com/api/?name=Jailda+Eulidia&background=6F42C1&color=fff&size=150'" alt="Dr.ª Jailda Eulídia da Silva Pinto" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">Dr.ª Jailda Eulídia da Silva Pinto</h3>
@@ -1110,7 +1134,7 @@
         <div class="col-md-6 col-lg-4">
           <div class="card h-100 card-speaker p-4 text-center">
             <div class="d-flex justify-content-center mb-3">
-              <img src="/static/Maria_Odete.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Maria+Odete&background=2957A3&color=fff&size=150'" alt="Juíza Maria Odete Freire de Araújo" class="speaker-avatar">
+              <img src="{% static 'Maria_Odete.jpeg' %}" onerror="this.src='https://ui-avatars.com/api/?name=Maria+Odete&background=2957A3&color=fff&size=150'" alt="Juíza Maria Odete Freire de Araújo" class="speaker-avatar">
             </div>
             <div class="speaker-name">
               <h3 class="h6 fw-bold text-dark mb-0">Juíza Maria Odete Freire de Araújo</h3>
