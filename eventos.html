@@ -1,1362 +1,2348 @@
 ﻿
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programação Oficial | Arena GO Recife Space Tech - REC'N'PLAY 2026</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Programação Oficial | Arena GO Recife Space Tech - REC'N'PLAY 2026
+    </title>
 
-  <!-- Tipografia Oficial LaUrsa: DM Sans -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <!-- Tipografia Oficial LaUrsa: DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Frameworks Base -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Frameworks Base -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
 
-  <style>
-    /* DESIGN TOKENS - DESIGN SYSTEM LAURSA (EMPREL) */
-    :root {
-      --laursa-primary-shine: #C4DCFF;
-      --laursa-primary-light: #6EA1F7;
-      --laursa-primary-default: #3E82F4;
-      --laursa-primary-medium: #346DCC;
-      --laursa-primary-dark: #2957A3;
+    <style>
+      /* DESIGN TOKENS - DESIGN SYSTEM LAURSA (EMPREL) */
+      :root {
+        --laursa-primary-shine: #c4dcff;
+        --laursa-primary-light: #6ea1f7;
+        --laursa-primary-default: #3e82f4;
+        --laursa-primary-medium: #346dcc;
+        --laursa-primary-dark: #2957a3;
 
-      --laursa-secondary-default: #11B163;
-      --laursa-secondary-dark: #0A6639;
+        --laursa-secondary-default: #11b163;
+        --laursa-secondary-dark: #0a6639;
 
-      --laursa-going-default: #FFBC00;
-      --laursa-going-dark: #B88700;
+        --laursa-going-default: #ffbc00;
+        --laursa-going-dark: #b88700;
 
-      --laursa-radius-sm: 4px;
-      --laursa-radius-md: 8px;
-      --laursa-radius-lg: 16px;
-      --laursa-elevation-1: 0 4px 8px rgba(0, 0, 0, 0.08);
-      --laursa-elevation-2: 0 8px 16px rgba(0, 0, 0, 0.12);
+        --laursa-radius-sm: 4px;
+        --laursa-radius-md: 8px;
+        --laursa-radius-lg: 16px;
+        --laursa-elevation-1: 0 4px 8px rgba(0, 0, 0, 0.08);
+        --laursa-elevation-2: 0 8px 16px rgba(0, 0, 0, 0.12);
 
-      --laursa-font: 'DM Sans', sans-serif;
-    }
+        --laursa-font: "DM Sans", sans-serif;
+      }
 
-    body {
-      font-family: var(--laursa-font);
-      background-color: #F8FAFC;
-      color: #1E293B;
-      -webkit-font-smoothing: antialiased;
-    }
+      body {
+        font-family: var(--laursa-font);
+        background-color: #f8fafc;
+        color: #1e293b;
+        -webkit-font-smoothing: antialiased;
+      }
 
-    /* Barra Superior do Governo */
-    .barra-governo {
-      height: 38px;
-      background: #FFFFFF;
-      border-bottom: 1px solid #E2E8F0;
-      font-size: 0.8rem;
-      font-weight: 500;
-    }
+      /* Barra Superior do Governo */
+      .barra-governo {
+        height: 38px;
+        background: #ffffff;
+        border-bottom: 1px solid #e2e8f0;
+        font-size: 0.8rem;
+        font-weight: 500;
+      }
 
-    /* Cabeçalho com o Banner Oficial */
-    .header-banner-wrapper {
-      background-color: #020617;
-      width: 100%;
-      border-bottom: 3px solid #00c3ff;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-    }
-    .header-banner-img {
-      width: 100%;
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
+      /* Cabeçalho com o Banner Oficial */
+      .header-banner-wrapper {
+        background-color: #020617;
+        width: 100%;
+        border-bottom: 3px solid #00c3ff;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+      }
+      .header-banner-img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        display: block;
+      }
 
-    /* Barra de Navegação Rápida */
-    .nav-actions-bar {
-      background-color: #0b192c;
-      padding: 12px 16px;
-      border-bottom: 1px solid #1e3a5f;
-    }
+      /* Barra de Navegação Rápida */
+      .nav-actions-bar {
+        background-color: #0b192c;
+        padding: 12px 16px;
+        border-bottom: 1px solid #1e3a5f;
+      }
 
-    /* Banner Chamada Inscrição Oficial */
-    .callout-inscricao {
-      background: linear-gradient(135deg, #0A6639 0%, #11B163 100%);
-      color: #FFFFFF;
-      border-radius: var(--laursa-radius-lg);
-      padding: 24px 32px;
-      box-shadow: var(--laursa-elevation-1);
-    }
+      /* Banner Chamada Inscrição Oficial */
+      .callout-inscricao {
+        background: linear-gradient(135deg, #0a6639 0%, #11b163 100%);
+        color: #ffffff;
+        border-radius: var(--laursa-radius-lg);
+        padding: 24px 32px;
+        box-shadow: var(--laursa-elevation-1);
+      }
 
-    /* Títulos de Seção */
-    .section-title {
-      position: relative;
-      padding-bottom: 12px;
-      margin-bottom: 24px;
-      font-weight: 700;
-      color: #0F172A;
-    }
-    .section-title::after {
-      content: "";
-      position: absolute;
-      left: 0;
-      bottom: 0;
-      width: 48px;
-      height: 4px;
-      border-radius: var(--laursa-radius-sm);
-      background-color: var(--laursa-primary-default);
-    }
+      /* Títulos de Seção */
+      .section-title {
+        position: relative;
+        padding-bottom: 12px;
+        margin-bottom: 24px;
+        font-weight: 700;
+        color: #0f172a;
+      }
+      .section-title::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 48px;
+        height: 4px;
+        border-radius: var(--laursa-radius-sm);
+        background-color: var(--laursa-primary-default);
+      }
 
-    /* Abas de Navegação por Dia */
-    .nav-pills-dias .nav-link {
-      background-color: #FFFFFF;
-      color: #0F172A;
-      border: 1px solid #E2E8F0;
-      font-weight: 700;
-      padding: 12px 20px;
-      border-radius: var(--laursa-radius-md);
-      transition: all 0.2s ease;
-      box-shadow: var(--laursa-elevation-1);
-    }
-    .nav-pills-dias .nav-link:hover {
-      background-color: #F1F5F9;
-      color: var(--laursa-primary-dark);
-    }
-    .nav-pills-dias .nav-link.active {
-      background-color: var(--laursa-primary-dark);
-      color: #FFFFFF;
-      border-color: var(--laursa-primary-dark);
-      box-shadow: var(--laursa-elevation-2);
-    }
+      /* Abas de Navegação por Dia */
+      .nav-pills-dias .nav-link {
+        background-color: #ffffff;
+        color: #0f172a;
+        border: 1px solid #e2e8f0;
+        font-weight: 700;
+        padding: 12px 20px;
+        border-radius: var(--laursa-radius-md);
+        transition: all 0.2s ease;
+        box-shadow: var(--laursa-elevation-1);
+      }
+      .nav-pills-dias .nav-link:hover {
+        background-color: #f1f5f9;
+        color: var(--laursa-primary-dark);
+      }
+      .nav-pills-dias .nav-link.active {
+        background-color: var(--laursa-primary-dark);
+        color: #ffffff;
+        border-color: var(--laursa-primary-dark);
+        box-shadow: var(--laursa-elevation-2);
+      }
 
-    /* Tabela LaUrsa */
-    .table-laursa {
-      border-radius: var(--laursa-radius-md);
-      overflow: hidden;
-      border: 1px solid #E2E8F0;
-      background: #FFFFFF;
-      box-shadow: var(--laursa-elevation-1);
-    }
-    .table-laursa th {
-      background-color: var(--laursa-primary-dark);
-      color: #FFFFFF;
-      font-weight: 700;
-      font-size: 0.82rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      padding: 14px 16px;
-      border: none;
-    }
-    .table-laursa td {
-      padding: 14px 16px;
-      border-bottom: 1px solid #F1F5F9;
-      font-size: 0.92rem;
-    }
+      /* Tabela LaUrsa */
+      .table-laursa {
+        border-radius: var(--laursa-radius-md);
+        overflow: hidden;
+        border: 1px solid #e2e8f0;
+        background: #ffffff;
+        box-shadow: var(--laursa-elevation-1);
+      }
+      .table-laursa th {
+        background-color: var(--laursa-primary-dark);
+        color: #ffffff;
+        font-weight: 700;
+        font-size: 0.82rem;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        padding: 14px 16px;
+        border: none;
+      }
+      .table-laursa td {
+        padding: 14px 16px;
+        border-bottom: 1px solid #f1f5f9;
+        font-size: 0.92rem;
+      }
 
-    /* Badges dos Polos e Locais */
-    .badge-polo-acp { background-color: #0d6efd; color: #fff; }
-    .badge-polo-trf { background-color: #6f42c1; color: #fff; }
-    .badge-polo-senac { background-color: #fd7e14; color: #fff; }
-    .badge-polo-astronomia { background-color: #198754; color: #fff; }
+      /* Formatação dos Convidados na Tabela */
+      .lista-convidados {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+      .item-convidado {
+        display: inline-flex;
+        align-items: baseline;
+        font-size: 0.88rem;
+        line-height: 1.35;
+        color: #334155;
+      }
+      .item-convidado::before {
+        content: "•";
+        color: var(--laursa-primary-default);
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin-right: 6px;
+        line-height: 1;
+      }
+      .tag-papel {
+        font-size: 0.75rem;
+        font-weight: 700;
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin-right: 6px;
+        background-color: #e2e8f0;
+        color: #1e293b;
+      }
 
-    /* Cards de Participantes Padronizados */
-    .card-speaker {
-      border: 1px solid #E2E8F0;
-      border-radius: var(--laursa-radius-lg);
-      background: #FFFFFF;
-      box-shadow: var(--laursa-elevation-1);
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
-    .card-speaker:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--laursa-elevation-2);
-    }
-    .speaker-avatar {
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-      border: 3px solid var(--laursa-primary-shine);
-      border-radius: 50%;
-    }
-    .speaker-name {
-      font-size: 0.98rem;
-      line-height: 1.25;
-      min-height: 42px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .speaker-bio {
-      font-size: 0.85rem;
-      line-height: 1.5;
-      color: #475569;
-      min-height: 100px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+      /* Badges dos Polos e Locais */
+      .badge-polo-acp {
+        background-color: #0d6efd;
+        color: #fff;
+      }
+      .badge-polo-trf {
+        background-color: #6f42c1;
+        color: #fff;
+      }
+      .badge-polo-senac {
+        background-color: #fd7e14;
+        color: #fff;
+      }
+      .badge-polo-astronomia {
+        background-color: #198754;
+        color: #fff;
+      }
 
-    .footer-space-official {
-      background: #020617;
-      color: #FFFFFF;
-      border-top: 1px solid #1E293B;
-      padding: 28px 16px;
-    }
-  </style>
-</head>
-<body class="d-flex flex-column min-vh-100">
+      /* Cards de Participantes Padronizados */
+      .card-speaker {
+        border: 1px solid #e2e8f0;
+        border-radius: var(--laursa-radius-lg);
+        background: #ffffff;
+        box-shadow: var(--laursa-elevation-1);
+        transition:
+          transform 0.2s ease,
+          box-shadow 0.2s ease;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .card-speaker:hover {
+        transform: translateY(-4px);
+        box-shadow: var(--laursa-elevation-2);
+      }
+      .speaker-avatar {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+        border: 3px solid var(--laursa-primary-shine);
+        border-radius: 50%;
+      }
+      .speaker-name {
+        font-size: 0.98rem;
+        line-height: 1.25;
+        min-height: 42px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .speaker-bio {
+        font-size: 0.85rem;
+        line-height: 1.5;
+        color: #475569;
+        min-height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-  <!-- Barra Superior do Governo -->
-  <div class="barra-governo d-flex align-items-center px-4">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
-      <div class="d-flex align-items-center gap-2">
-        <a href="/" class="text-decoration-none fw-bold" style="color: var(--laursa-primary-dark);">
-          <i class="bi bi-arrow-left me-1"></i> PREFEITURA DO RECIFE
+      .footer-space-official {
+        background: #020617;
+        color: #ffffff;
+        border-top: 1px solid #1e293b;
+        padding: 28px 16px;
+      }
+    </style>
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <!-- Barra Superior do Governo -->
+    <div class="barra-governo d-flex align-items-center px-4">
+      <div
+        class="container-fluid d-flex justify-content-between align-items-center"
+      >
+        <div class="d-flex align-items-center gap-2">
+          <a
+            href="/"
+            class="text-decoration-none fw-bold"
+            style="color: var(--laursa-primary-dark)"
+          >
+            <i class="bi bi-arrow-left me-1"></i> PREFEITURA DO RECIFE
+          </a>
+          <span class="text-muted d-none d-sm-inline">• GO Recife</span>
+        </div>
+        <span class="text-secondary small"
+          >REC'N'PLAY 2026 • Trilha Espacial</span
+        >
+      </div>
+    </div>
+
+    <!-- Cabeçalho Oficial -->
+    <header class="header-banner-wrapper">
+      <img
+        src="/static/banner_header.png"
+        alt="Arena GO Recife Space Tech - REC'N'PLAY 2026"
+        class="header-banner-img"
+      />
+    </header>
+
+    <!-- Barra de Ações Rápidas -->
+    <div class="nav-actions-bar text-center">
+      <div
+        class="container d-flex justify-content-center align-items-center gap-2 flex-wrap"
+      >
+        <a
+          href="/"
+          class="btn btn-outline-light btn-sm px-3 py-2"
+          style="border-radius: var(--laursa-radius-md)"
+        >
+          <i class="bi bi-house-door me-1"></i> Início (Estratégia)
         </a>
-        <span class="text-muted d-none d-sm-inline">• GO Recife</span>
-      </div>
-      <span class="text-secondary small">REC'N'PLAY 2026 • Trilha Espacial</span>
-    </div>
-  </div>
-
-  <!-- Cabeçalho Oficial -->
-  <header class="header-banner-wrapper">
-    <img src="/static/banner_header.png" alt="Arena GO Recife Space Tech - REC'N'PLAY 2026" class="header-banner-img">
-  </header>
-
-  <!-- Barra de Ações Rápidas -->
-  <div class="nav-actions-bar text-center">
-    <div class="container d-flex justify-content-center align-items-center gap-2 flex-wrap">
-      <a href="/" class="btn btn-outline-light btn-sm px-3 py-2" style="border-radius: var(--laursa-radius-md);">
-        <i class="bi bi-house-door me-1"></i> Início (Estratégia)
-      </a>
-      <a href="/visao-de-futuro" class="btn btn-outline-light btn-sm px-3 py-2" style="border-radius: var(--laursa-radius-md);">
-        <i class="bi bi-eye me-1"></i> Visão de Futuro
-      </a>
-      <a href="/iniciativas" class="btn btn-outline-light btn-sm px-3 py-2" style="border-radius: var(--laursa-radius-md);">
-        <i class="bi bi-diagram-3 me-1"></i> Iniciativas
-      </a>
-      <a href="#grade-dias" class="btn btn-warning fw-bold btn-sm px-3 py-2" style="border-radius: var(--laursa-radius-md);">
-        <i class="bi bi-calendar3 me-1"></i> Grade por Dia
-      </a>
-      <a href="#circuitos-fixos" class="btn btn-outline-light btn-sm px-3 py-2" style="border-radius: var(--laursa-radius-md);">
-        <i class="bi bi-telescope me-1"></i> Circuitos Fixos
-      </a>
-      <a href="#participantes" class="btn btn-outline-light btn-sm px-3 py-2" style="border-radius: var(--laursa-radius-md);">
-        <i class="bi bi-people me-1"></i> Participantes
-      </a>
-      <!-- BOTÃO DE INSCRIÇÃO SOLICITADO POR JOÃO CARLOS -->
-      <a href="https://register.jalanlive.com/recnplay2026/tickets?pos=415" target="_blank" rel="noopener noreferrer" class="btn btn-success fw-bold btn-sm px-3 py-2 shadow-sm" style="border-radius: var(--laursa-radius-md);">
-        <i class="bi bi-ticket-perforated-fill me-1"></i> Inscreva-se no Festival
-      </a>
-    </div>
-  </div>
-
-  <!-- Conteúdo Principal -->
-  <main class="container my-5 flex-grow-1">
-
-    <!-- Card Chamada Destaque Inscrição Oficial REC'N'PLAY -->
-    <div class="callout-inscricao mb-5">
-      <div class="row align-items-center g-3">
-        <div class="col-lg-8 text-center text-lg-start">
-          <span class="badge bg-white text-success fw-bold mb-1 text-uppercase">Entrada Gratuita</span>
-          <h2 class="h4 fw-bold text-white mb-1">Participe do Festival REC'N'PLAY 2026</h2>
-          <p class="mb-0 text-white-50 small">Garanta seu ingresso oficial para acessar todos os polos, palestras e as oficinas práticas da Trilha Espacial.</p>
-        </div>
-        <div class="col-lg-4 text-center text-lg-end">
-          <a href="https://register.jalanlive.com/recnplay2026/tickets?pos=415" target="_blank" rel="noopener noreferrer" class="btn btn-light fw-bold px-4 py-2" style="border-radius: var(--laursa-radius-md); color: var(--laursa-secondary-dark);">
-            <i class="bi bi-ticket-perforated-fill me-1"></i> Fazer Inscrição Oficial
-          </a>
-        </div>
+        <a
+          href="/visao-de-futuro"
+          class="btn btn-outline-light btn-sm px-3 py-2"
+          style="border-radius: var(--laursa-radius-md)"
+        >
+          <i class="bi bi-eye me-1"></i> Visão de Futuro
+        </a>
+        <a
+          href="/iniciativas"
+          class="btn btn-outline-light btn-sm px-3 py-2"
+          style="border-radius: var(--laursa-radius-md)"
+        >
+          <i class="bi bi-diagram-3 me-1"></i> Iniciativas
+        </a>
+        <a
+          href="#grade-dias"
+          class="btn btn-warning fw-bold btn-sm px-3 py-2"
+          style="border-radius: var(--laursa-radius-md)"
+        >
+          <i class="bi bi-calendar3 me-1"></i> Grade por Dia
+        </a>
+        <a
+          href="#circuitos-fixos"
+          class="btn btn-outline-light btn-sm px-3 py-2"
+          style="border-radius: var(--laursa-radius-md)"
+        >
+          <i class="bi bi-telescope me-1"></i> Circuitos Fixos
+        </a>
+        <a
+          href="#participantes"
+          class="btn btn-outline-light btn-sm px-3 py-2"
+          style="border-radius: var(--laursa-radius-md)"
+        >
+          <i class="bi bi-people me-1"></i> Participantes
+        </a>
+        <!-- BOTÃO DE INSCRIÇÃO SOLICITADO POR JOÃO CARLOS -->
+        <a
+          href="https://register.jalanlive.com/recnplay2026/tickets?pos=415"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-success fw-bold btn-sm px-3 py-2 shadow-sm"
+          style="border-radius: var(--laursa-radius-md)"
+        >
+          <i class="bi bi-ticket-perforated-fill me-1"></i> Inscreva-se no
+          Festival
+        </a>
       </div>
     </div>
 
-    <!-- Grade Completa por Dia (Filtro por Abas) -->
-    <!-- Grade Completa por Dia (Filtro por Abas) -->
-    <section class="mb-5" id="grade-dias">
-      <div class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4 p-3 bg-white border rounded-3 shadow-sm">
-        <div>
-          <h2 class="h4 section-title mb-1">
-            <i class="bi bi-calendar-week me-2" style="color: var(--laursa-primary-default);"></i>Programação Diária Completa
-          </h2>
-          <p class="text-muted small mb-0">Programação oficial da Arena GO Recife Space Tech transcrita fielmente da planilha oficial.</p>
-        </div>
-
-        <!-- Área de Downloads dos Documentos Oficiais -->
-        <div class="d-flex gap-2 flex-wrap">
-          <!-- Botão 1: Baixar / Abrir o PDF de Briefing -->
-          <a href="/static/briefing_arena_space_tech_2026.pdf" target="_blank" download class="btn btn-outline-primary btn-sm fw-bold px-3 py-2 d-inline-flex align-items-center">
-            <i class="bi bi-file-earmark-pdf-fill text-danger me-2 fs-6"></i>
-            <span>Baixar Briefing do Evento (PDF)</span>
-          </a>
-
-          <!-- Botão 2: Ver / Baixar o Cartaz da Programação -->
-          <a href="/static/programacao_completa.jpeg" target="_blank" download class="btn btn-outline-secondary btn-sm fw-bold px-3 py-2 d-inline-flex align-items-center">
-            <i class="bi bi-image text-primary me-2 fs-6"></i>
-            <span>Cartaz da Programação (JPEG)</span>
-          </a>
-        </div>
-      </div>
-
-
-      <!-- Abas dos 4 Dias -->
-      <ul class="nav nav-pills nav-pills-dias mb-4 gap-2 flex-wrap" id="pills-tab" role="tablist">
-        <li class="nav-item" role="presentation">
-          <button class="nav-link active" id="pills-dia11-tab" data-bs-toggle="pill" data-bs-target="#pills-dia11" type="button" role="tab">
-            <i class="bi bi-calendar-event me-1"></i> 11/11 (Quarta-feira)
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="pills-dia12-tab" data-bs-toggle="pill" data-bs-target="#pills-dia12" type="button" role="tab">
-            <i class="bi bi-calendar-event me-1"></i> 12/11 (Quinta-feira)
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="pills-dia13-tab" data-bs-toggle="pill" data-bs-target="#pills-dia13" type="button" role="tab">
-            <i class="bi bi-calendar-event me-1"></i> 13/11 (Sexta-feira)
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link" id="pills-dia14-tab" data-bs-toggle="pill" data-bs-target="#pills-dia14" type="button" role="tab">
-            <i class="bi bi-calendar-event me-1"></i> 14/11 (Sábado)
-          </button>
-        </li>
-      </ul>
-
-      <!-- Conteúdo das Abas -->
-      <div class="tab-content" id="pills-tabContent">
-
-        <!-- DIA 11/11 (QUARTA-FEIRA) -->
-        <div class="tab-pane fade show active" id="pills-dia11" role="tabpanel">
-          <div class="table-responsive table-laursa">
-            <table class="table table-hover align-middle mb-0">
-              <thead>
-                <tr>
-                  <th style="white-space: nowrap;">Horário</th>
-                  <th>Local</th>
-                  <th>Parceiros</th>
-                  <th>Atividade</th>
-                  <th>Convidados</th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- 10 às 12h: TRF-5 / Auditório da ESMAFE -->
-                <tr>
-                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">10 às 12h</td>
-                  <td>
-                    <span class="badge badge-polo-trf d-block mb-1">TRF-5</span>
-                    <small class="text-muted">TRF-5, auditório da ESMAFE</small>
-                  </td>
-                  <td>TRF-5, FORAP, MPT, TRT-6, Superintendência do Ministério do Trabalho de Pernambuco, ACP</td>
-                  <td class="fw-semibold">
-                    Painel de debate: Lei da jovem aprendizagem e o papel do jovem recifense na revolução que envolve tecnologia digital, setor espacial e performance da cidade.
-                  </td>
-                  <td class="small text-secondary">
-                    Dr.ª Simone Brazil (MT-PE e Presidente FORAP);<br>
-                    Dr.ª Promotora Jailda Eulídia da Silva Pinto (MPT);<br>
-                    Dr.ª Juíza Maria Odete Freire de Araujo (TRT-PE)
-                  </td>
-                </tr>
-
-                <!-- 10 às 12h: ACP Sala 2 -->
-                <tr>
-                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">10 às 12h</td>
-                  <td>
-                    <span class="badge badge-polo-acp d-block mb-1">ACP</span>
-                    <small class="text-muted">ACP - Associação Comercial de Pernambuco (1º andar, Sala 2)</small>
-                  </td>
-                  <td>ACP, Faculdade Estácio</td>
-                  <td class="fw-semibold">
-                    Viva Estácio Space Tech: o jovem, tecnologia e futuro da cidade
-                  </td>
-                  <td class="small text-muted">-</td>
-                </tr>
-
-                <!-- 13 às 15h: SENAC 235 -->
-                <tr>
-                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">13 às 15h</td>
-                  <td>
-                    <span class="badge badge-polo-senac d-block mb-1">SENAC 235</span>
-                    <small class="text-muted">Auditório SENAC 235</small>
-                  </td>
-                  <td>POLÍ-UPE, SENAC</td>
-                  <td class="fw-semibold">
-                    Demoday Inova Poli-UPE, Prof. Genésio Gomes
-                  </td>
-                  <td class="small text-secondary">
-                    <strong>Coordenador:</strong> Professor Genésio Gomes (Poli-UPE)<br>
-                    <strong>Palestrante Abertura:</strong> João Carlos Costa (SECTI/Emprel)
-                  </td>
-                </tr>
-
-                <!-- 14 às 16h: ACP Sala 2 -->
-                <tr>
-                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">14 às 16h</td>
-                  <td>
-                    <span class="badge badge-polo-acp d-block mb-1">ACP</span>
-                    <small class="text-muted">ACP - Associação Comercial de Pernambuco (1º andar, Sala 2)</small>
-                  </td>
-                  <td>ACP, FORAP</td>
-                  <td class="fw-semibold">
-                    Forap: O jovem e o futuro do Recife
-                  </td>
-                  <td class="small text-secondary">
-                    Maria Izabel - Forap, Rede Cidadã
-                  </td>
-                </tr>
-
-                <!-- 14 às 16h: ACP Sala 1 -->
-                <tr>
-                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">14 às 16h</td>
-                  <td>
-                    <span class="badge badge-polo-acp d-block mb-1">ACP</span>
-                    <small class="text-muted">ACP - Associação Comercial de Pernambuco (1º andar, Sala 1)</small>
-                  </td>
-                  <td>ACP, FBR, Poli-UPE</td>
-                  <td class="fw-semibold">
-                    Painel de debate: Resiliência urbana, tecnologia digital, dados satelitais e conectividade na gestão urbana
-                  </td>
-                  <td class="small text-secondary">
-                    Ascânio França, CEO FBR<br>
-                    Prof. Dr. Leonardo, UPE/ INPE<br>
-                    Inessa Amâncio - SENAI
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+    <!-- Conteúdo Principal -->
+    <main class="container my-5 flex-grow-1">
+      <!-- Card Chamada Destaque Inscrição Oficial REC'N'PLAY -->
+      <div class="callout-inscricao mb-5">
+        <div class="row align-items-center g-3">
+          <div class="col-lg-8 text-center text-lg-start">
+            <span
+              class="badge bg-white text-success fw-bold mb-1 text-uppercase"
+              >Entrada Gratuita</span
+            >
+            <h2 class="h4 fw-bold text-white mb-1">
+              Participe do Festival REC'N'PLAY 2026
+            </h2>
+            <p class="mb-0 text-white-50 small">
+              Garanta seu ingresso oficial para acessar todos os polos,
+              palestras e as oficinas práticas da Trilha Espacial.
+            </p>
           </div>
-        </div>
-
-        <!-- DIA 12/11 (QUINTA-FEIRA) -->
-        <div class="tab-pane fade" id="pills-dia12" role="tabpanel">
-          <div class="table-responsive table-laursa">
-            <table class="table table-hover align-middle mb-0">
-              <thead>
-                <tr>
-                  <th style="white-space: nowrap;">Horário</th>
-                  <th>Local</th>
-                  <th>Parceiros</th>
-                  <th>Atividade</th>
-                  <th>Convidados</th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- 9 às 12h: Galeria SENAC Apolo 235 -->
-                <tr>
-                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">9 às 12h</td>
-                  <td>
-                    <span class="badge badge-polo-senac d-block mb-1">SENAC APOLO 235</span>
-                    <small class="text-muted">Galeria SENAC Apolo 235</small>
-                  </td>
-                  <td>CORETO / SECTI / ACP / SENAC / Grau Educacional</td>
-                  <td class="fw-semibold">
-                    IdeaThon Coreto: O Pilar do futuro Recife, Chamie
-                  </td>
-                  <td class="small text-secondary">
-                    Gabriel Chamie - Coreto<br>
-                    Diogo Gomes - Emprel<br>
-                    Ernani - SENAC<br>
-                    Lucila - SEDUC, SEPT, Protec<br>
-                    Marco Fabricio - Grau Educacional
-                  </td>
-                </tr>
-                
-                <!-- 10 às 12h: TRF-5 / ESMAFE -->
-                <tr>
-                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">10 às 12h</td>
-                  <td>
-                    <span class="badge badge-polo-trf d-block mb-1">TRF-5</span>
-                    <small class="text-muted">TRF-5, auditório da ESMAFE</small>
-                  </td>
-                  <td>TRF-5, UNICAP, UFPE, IFPE, ALADA, Comissão Espacial da OAB-PE</td>
-                  <td class="fw-semibold">
-                    Painel de debate: A urgência do debate sobre direito e diplomacia espacial no Brasil
-                  </td>
-                  <td class="small text-secondary">
-                    Prof.ª Dr.ª Adriana Rocha, Unicap;<br>
-                    Prof. Dr.º Thiago Bezerra, Comissão Espacial OAB-PE;<br>
-                    Prof. Dr.º Torquato Castro Junior, Faculdade de Direito UFPE;<br>
-                    Prof. Dr.ª Andréa Berenguer, IFPE;<br>
-                    Prof. Dr.ª Roxana Corbran, ALADA
-                  </td>
-                </tr>
-
-                <!-- 11:20 às 12:10 h: Teatro Hermínio Borba Filho -->
-                <tr>
-                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">11:20 às 12:10 h</td>
-                  <td>
-                    <span class="badge bg-secondary d-block mb-1">TEATRO</span>
-                    <small class="text-muted">Teatro Herminio Borba Filho</small>
-                  </td>
-                  <td>Porto Digital</td>
-                  <td class="fw-semibold">
-                    O espaço começa aqui: Como se comunicar com o espaço? (Curadoria Porto Digital)
-                  </td>
-                  <td class="small text-secondary">
-                    Dr. Umut - NASA
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-
-<!-- DIA 13/11 (SEXTA-FEIRA) -->
-        <div class="tab-pane fade" id="pills-dia13" role="tabpanel">
-          <div class="table-responsive table-laursa">
-            <table class="table table-hover align-middle mb-0">
-              <thead>
-                <tr>
-                  <th style="white-space: nowrap;">Horário</th>
-                  <th>Local</th>
-                  <th>Parceiros</th>
-                  <th>Atividade</th>
-                  <th>Convidados</th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- 9 às 16h: ACP Hall térreo -->
-                <tr>
-                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">9 às 16 h</td>
-                  <td>
-                    <span class="badge badge-polo-acp d-block mb-1">ACP</span>
-                    <small class="text-muted">ACP - Associação Comercial de Pernambuco (Hall térreo)</small>
-                  </td>
-                  <td>ACP, SAR</td>
-                  <td class="fw-semibold">
-                    Planetário inflável e exposição
-                  </td>
-                  <td class="small text-secondary">
-                    Marcelo José dos Santos - Diretor SAR
-                  </td>
-                </tr>
-
-                <!-- 10 às 12h: TRF-5 / ESMAFE -->
-                <tr>
-                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">10 às 12h</td>
-                  <td>
-                    <span class="badge badge-polo-trf d-block mb-1">TRF-5</span>
-                    <small class="text-muted">TRF-5, auditório da ESMAFE</small>
-                  </td>
-                  <td>TRF-5, Parqtec, Parqtel</td>
-                  <td class="fw-semibold">
-                    Painel de debate: Transformação digital, deep tech e inovação industrial como competências da cidade do Recife num olhar sistêmico de futuro.
-                  </td>
-                  <td class="small text-secondary">
-                    Prof. Dr. Roberto Guerra, Diretor do Parqtec;<br>
-                    Prof. Dr. Rogério, Diretor do Parqtel;
-                  </td>
-                </tr>
-
-                <!-- 10 às 12h: ACP Sala 2 -->
-                <tr>
-                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">10 às 12h</td>
-                  <td>
-                    <span class="badge badge-polo-acp d-block mb-1">ACP</span>
-                    <small class="text-muted">ACP - Associação Comercial de Pernambuco (1º andar, Sala 2)</small>
-                  </td>
-                  <td>ACP, Poli-UPE</td>
-                  <td class="fw-semibold">
-                    Poli-UPE: O futuro da Educação e as tecnologias do futuro
-                  </td>
-                  <td class="small text-secondary">
-                    Prof. Genésio Gomes, Poli-UPE
-                  </td>
-                </tr>
-
-                <!-- 13 às 15h: Carreta Smart Lab -->
-                <tr>
-                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">13 às 15h</td>
-                  <td>
-                    <span class="badge badge-polo-senac d-block mb-1">CARRETA SMART LAB</span>
-                    <small class="text-muted">Carreta Smart Lab</small>
-                  </td>
-                  <td>POLI-UPE, SENAC</td>
-                  <td class="fw-semibold">
-                    Oficineiros UPE: Oficina interativa CubeSat: monte e controle um satélite ao vivo. Prof. Wladimir
-                  </td>
-                  <td class="small text-secondary">
-                    Professor Vladimir Soares, Poli-UPE
-                  </td>
-                </tr>
-
-                <!-- 14 às 16h: ACP Sala 2 -->
-                <tr>
-                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">14 às 16h</td>
-                  <td>
-                    <span class="badge badge-polo-acp d-block mb-1">ACP</span>
-                    <small class="text-muted">ACP - Associação Comercial de Pernambuco (1º andar, Sala 2)</small>
-                  </td>
-                  <td>ACP, FORAP</td>
-                  <td class="fw-semibold">
-                    Forap: O jovem e o futuro do Recife
-                  </td>
-                  <td class="small text-secondary">
-                    Maria Izabel - Forap, Rede Cidadã<br>
-                    Lucas Felipe Silva dos Santos - SEST/SENAT
-                  </td>
-                </tr>
-
-                <!-- 14 às 16h: ACP Sala 1 -->
-                <tr>
-                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">14 às 16h</td>
-                  <td>
-                    <span class="badge badge-polo-acp d-block mb-1">ACP</span>
-                    <small class="text-muted">ACP - Associação Comercial de Pernambuco (1º andar, Sala 1)</small>
-                  </td>
-                  <td>ACP, UFPE, Oeste Inovador, Parquetec, Poli-UPE</td>
-                  <td class="fw-semibold">
-                    Painel de debate: Desafios, perspectivas e oportunidades dos próximos 25 anos na interface entre transformação digital e serviços baseados em espaço
-                  </td>
-                  <td class="small text-secondary">
-                    Rafael Figueiredo, Procurador PE;<br>
-                    Pedro Carelli (UFPE Oeste Inovador);<br>
-                    Manoel Marinho, Poli-UPE;<br>
-                    Ricardo Brasileiro - SENAI;<br>
-                    Prof. Dr. Leonardo - POLÍ-UPE
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        <!-- DIA 14/11 (SÁBADO) -->
-        <div class="tab-pane fade" id="pills-dia14" role="tabpanel">
-          <div class="table-responsive table-laursa">
-            <table class="table table-hover align-middle mb-0">
-              <thead>
-                <tr>
-                  <th style="white-space: nowrap;">Horário</th>
-                  <th>Local</th>
-                  <th>Parceiros</th>
-                  <th>Atividade</th>
-                  <th>Convidados</th>
-                </tr>
-              </thead>
-              <tbody>
-                <!-- 9 às 10h: Carreta Smart Lab -->
-                <tr>
-                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">9 às 10h</td>
-                  <td>
-                    <span class="badge badge-polo-senac d-block mb-1">CARRETA SMART LAB</span>
-                    <small class="text-muted">Carreta Smart Lab</small>
-                  </td>
-                  <td>POLÍ-UPE, SENAC</td>
-                  <td class="fw-semibold">
-                    Oficineiros UPE: Oficina de Drones com Equipe DeltaProf . George
-                  </td>
-                  <td class="small text-secondary">
-                    Professor George Azevedo, Polí-UPE
-                  </td>
-                </tr>
-
-                <!-- 9 às 12 h: ACP Hall térreo -->
-                <tr>
-                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">9 às 12 h</td>
-                  <td>
-                    <span class="badge badge-polo-acp d-block mb-1">ACP</span>
-                    <small class="text-muted">ACP - Associação Comercial de Pernambuco (Hall terreo)</small>
-                  </td>
-                  <td>ACP, SAR</td>
-                  <td class="fw-semibold">
-                    Planetário inflável e exposição
-                  </td>
-                  <td class="small text-secondary">
-                    Marcelo José dos Santos - Diretor SAR
-                  </td>
-                </tr>
-
-                <!-- 10 às 12 h: ACP Sala 2 -->
-                <tr>
-                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">10 às 12 h</td>
-                  <td>
-                    <span class="badge badge-polo-acp d-block mb-1">ACP</span>
-                    <small class="text-muted">ACP - Associação Comercial de Pernambuco (1º andar, Sala 2)</small>
-                  </td>
-                  <td>ACP, Grau Educacional</td>
-                  <td class="fw-semibold">
-                    Grau Educacional: jovens, tecnologia e futuro da cidade
-                  </td>
-                  <td class="small text-muted">-</td>
-                </tr>
-
-                <!-- 10 às 12h: ACP Sala 1 -->
-                <tr>
-                  <td class="fw-bold text-primary font-monospace" style="white-space: nowrap;">10 às 12h</td>
-                  <td>
-                    <span class="badge badge-polo-acp d-block mb-1">ACP</span>
-                    <small class="text-muted">ACP - Associação Comercial de Pernambuco (1º andar, Sala 1)</small>
-                  </td>
-                  <td>ACP</td>
-                  <td class="fw-semibold">
-                    Painel de debate: Papel dos ecossistemas territoriais em tecnologias digitais para enfrentar os desafios no setor espacial
-                  </td>
-                  <td class="small text-secondary">
-                    Ricardo Brasileiro, SENAI
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-
-        
-    </section>
-
-    <!-- Circuitos Contínuos (11 a 14 de Novembro) -->
-    <section class="mb-5" id="circuitos-fixos">
-      <h2 class="h4 section-title">
-        <i class="bi bi-compass me-2" style="color: var(--laursa-going-dark);"></i>Circuitos Contínuos da UFRPE (11/11, das 9 às 16h)
-      </h2>
-      <div class="row g-4">
-        
-        <!-- MARCO ZERO E PRAÇA DO ARSENAL -->
-        <div class="col-lg-6">
-          <div class="card h-100 border-0 p-4 shadow-sm bg-white" style="border-radius: var(--laursa-radius-lg); border-left: 5px solid var(--laursa-going-default) !important;">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <span class="badge bg-danger">MARCO ZERO E PRAÇA DO ARSENAL</span>
-              <span class="badge bg-light text-dark border">Manhã / Tarde</span>
-            </div>
-            <h3 class="h5 fw-bold text-dark mb-1">Ciências, foguetes e imaginação</h3>
-            <p class="text-secondary small mb-3"><strong>Tema:</strong> Atividade de entreterimento para conectar com o tema espacial</p>
-            
-            <div class="p-3 bg-light rounded-2 border">
-              <h4 class="h6 fw-bold text-dark mb-2">Programação:</h4>
-              <ul class="list-unstyled small mb-0">
-                
-                <li><strong>14/11/2026 (SÁB):</strong> Manhã - Oficina de Lançamento Foguetes</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <!-- TORRE MALAKOF -->
-        <div class="col-lg-6">
-          <div class="card h-100 border-0 p-4 shadow-sm bg-white" style="border-radius: var(--laursa-radius-lg); border-left: 5px solid var(--laursa-primary-default) !important;">
-            <div class="d-flex justify-content-between align-items-start mb-2">
-              <span class="badge badge-polo-astronomia">TORRE MALAKOF</span>
-              <span class="badge bg-light text-dark border">Manhã / Tarde</span>
-            </div>
-            <h3 class="h5 fw-bold text-dark mb-1">Atividades de oficinas e extensão relacionadas à Astronomia</h3>
-            <p class="text-secondary small mb-3"><strong>Espaço:</strong> Salas do Torre Malakof</p>
-            
-            <div class="p-3 bg-light rounded-2 border">
-              <h4 class="h6 fw-bold text-dark mb-2">Atividades:</h4>
-              <ul class="list-unstyled small mb-0">
-                <li class="mb-2">Observação astronômica com telescópios, máscaras solares e aplicativos para celular;</li>
-                <li class="mb-2">Oficina de montagem e lançamento de foguetes educativos;</li>
-                <li class="mb-2">Palestras temáticas sobre Astronomia e Ciências Espaciais;</li>
-                <li class="mb-2">Representação teatral sobre episódios e personagens da Astronomia;</li>
-                <li>Turismo Astronômico pelo observatório de Jorge Marcgrave (patrono da Astronomia de Pernambuco) e pela Torre Malakoff de Dom Pedro II (patrono da Astronomia no Brasil).</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Participantes e Facilitadores -->
-    <section class="mb-5" id="participantes">
-      <h2 class="h4 section-title">
-        <i class="bi bi-people-fill me-2" style="color: var(--laursa-primary-default);"></i>Participantes e Facilitadores
-      </h2>
-      <p class="text-muted">Especialistas e líderes institucionais presentes na trilha oficial da Arena GO Recife Space Tech.</p>
-      
-      <div class="row g-4">
-        
-        <!-- Participante 1: José Roberto Ferreira Guerra -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/JOSE_ROBERTO.jpeg" alt="José Roberto Ferreira Guerra" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">José Roberto Ferreira Guerra</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-primary-subtle text-primary fw-bold" style="border-radius: var(--laursa-radius-sm);">Diretor do Parque.TeC UFPE</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Diretor do Parque Tecnológico e Científico da UFPE e Professor do DCA e PPHTur/CCSA. Possui mais de uma década de experiência em inovação e coordenação de projetos voltados ao empreendedorismo tecnológico.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 2: João Carlos Costa -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/joao_carlos.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Joao+Carlos+Costa&background=2957A3&color=fff&size=150'" alt="João Carlos Costa" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">João Carlos Costa</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-primary-subtle text-primary fw-bold" style="border-radius: var(--laursa-radius-sm);">Assessor Especial Secti/Emprel</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Lidera projetos estratégicos phygital como Arena Go Recife e Recife Space Tech. Especialista em gestão pública e orquestração de ecossistemas inovadores, com formação executiva em Harvard e doutorando em Administração.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 3: Dr. Rogério Pontes -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/rogerio_pontes.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Rogerio+Pontes&background=0A6639&color=fff&size=150'" alt="Dr. Rogério Pontes" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Dr. Rogério Pontes</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-success-subtle text-success fw-bold" style="border-radius: var(--laursa-radius-sm);">Gerente Geral CT&I PARQTEL</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Doutor em Engenharia Mecânica e Professor Associado da POLI/UPE e PPGES. Atua na gerência de CT&I da SECTI-PE, liderando projetos de Pesquisa, Desenvolvimento e Inovação voltados para a Indústria 4.0.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 4: Dr. Thiago Carvalho -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/thiago_carvalho.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Thiago+Carvalho&background=3E82F4&color=fff&size=150'" alt="Dr. Thiago Carvalho" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Dr. Thiago Carvalho</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-info-subtle text-dark fw-bold" style="border-radius: var(--laursa-radius-sm);">Direito Espacial OAB/PE</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Mestre em Direito pela UFPE e Presidente da Comissão de Direito Aeronáutico e Espacial da OAB/PE. Fundador da Academia do Espaço, com destacada atuação jurídica e regulatória no setor aeroespacial.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 5: Dra. Andréa Berenguer -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/andrea_berenguer.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Andrea+Berenguer&background=6F42C1&color=fff&size=150'" alt="Dra. Andréa Berenguer" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Dra. Andréa Berenguer</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-purple-subtle text-dark fw-bold" style="background:#e8d9ff; border-radius: var(--laursa-radius-sm);">Docente IFPE / Recife Space</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Doutora em Ciências Jurídicas e Professora do IFPE com 30 anos de docência em Direito e Turismo. Coordenadora de extensão e colaboradora da política pública municipal Recife Space e do Ecossistema Oeste Inovador.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 6: Ascânio França -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">              
-              <img src="/static/ascanio_franca.png" onerror="this.src='https://ui-avatars.com/api/?name=Ascanio+Franca&background=11B163&color=fff&size=150'" alt="Ascânio França" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Ascânio França</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-success-subtle text-success fw-bold" style="border-radius: var(--laursa-radius-sm);">Fundador e CEO da FBR Digital</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Ascânio França, 37 anos, Caruaruense de Recife, pai de Antônio e Liana, Fundador e CEO da FBR Digital e sócio-fundador da Lumos Academy. Embaixador do Porto Digital de Pernambuco, Membro do Advisory Board do NERD e Conselheiro do Tapioca Valley.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 7: Prof. George Azevedo -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/GEORGE_AZEVEDO.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=George+Azevedo&background=0A6639&color=fff&size=150'" alt="Prof. George Azevedo" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Prof. George Azevedo</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-success-subtle text-success fw-bold" style="border-radius: var(--laursa-radius-sm);">Coordenador Setorial POLI/UPE</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Doutor em Engenharia da Computação e docente da POLI/UPE. Atua em controle de sistemas dinâmicos, robótica, visão computacional, inteligência artificial, sistemas embarcados e drones voltados a aplicações práticas da engenharia.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 8: Prof. Vladimir Soares -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/VLADIMIR_SOARES.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Vladimir+Soares&background=2957A3&color=fff&size=150'" alt="Prof. Vladimir Soares" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Prof. Vladimir Soares</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-primary-subtle text-primary fw-bold" style="border-radius: var(--laursa-radius-sm);">Coordenador LabTel / POLI-UPE</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Doutor em Engenharia Elétrica e Professor Assistente da POLI-UPE. Coordenador do LabTel e orientador da equipe de CubeSats DeltaV Satélites, pesquisando arquiteturas de comunicação para nanossatélites e sensores ópticos.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 10: Adriana Rocha Coutinho -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/adriana_rocha.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Adriana+Rocha&background=6F42C1&color=fff&size=150'" alt="Adriana Rocha Coutinho" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Adriana Rocha Coutinho</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-purple-subtle text-dark fw-bold" style="background:#e8d9ff; border-radius: var(--laursa-radius-sm);">Docente Unicap / Doutoranda PPGD</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Advogada, professora de Direito Constitucional da Unicap e doutoranda em Cidadania Digital (PPGD-Unicap). Mestra em Direito pela PUC-SP, ex-vice-presidente da OAB-PE e ex-conselheira federal do CFOAB.
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Participante 9: Prof. Genésio Gomes -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/GENESIO_GOMES.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Genesio+Gomes&background=0A6639&color=fff&size=150'" alt="Prof. Genésio Gomes" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Prof. Genésio Gomes</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-success-subtle text-success fw-bold" style="border-radius: var(--laursa-radius-sm);">Coordenador INOVA POLI/UPE</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Doutor em Ciência da Computação (CIn/UFPE), Professor de Empreendedorismo da UPE e coordenador do INOVA POLI/UPE. Fundador do Células Empreendedoras e investidor anjo com prêmios nacionais em inovação aberta.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 11: Marcelo José dos Santos -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/marcelo_jose.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Marcelo+Jose+dos+Santos&background=198754&color=fff&size=150'" alt="Marcelo José dos Santos" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Marcelo José dos Santos</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-success-subtle text-success fw-bold" style="border-radius: var(--laursa-radius-sm);">Presidente da SAR</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Presidente da Sociedade Astronômica do Recife (SAR). Pós-graduando em ensino de Astronomia, astrônomo amador e divulgador científico.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 12: Pedro Câmera -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/Pedro_camera.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Pedro+Camera&background=3E82F4&color=fff&size=150'" alt="Pedro Câmera" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Pedro Câmera</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-primary-subtle text-primary fw-bold" style="border-radius: var(--laursa-radius-sm);">Secretário Executivo da PCR</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Biólogo, mestre e gestor público. Atualmente é Secretário Executivo de Trabalho e Qualificação Profissional da Prefeitura do Recife, integrando visão estratégica e gestão orientada por evidências.
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- Participante 13: Lucilla Azevedo -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/lucilla_azeved.png" onerror="this.src='https://ui-avatars.com/api/?name=Lucilla+Azevedo&background=2957A3&color=fff&size=150'" alt="Lucilla Azevedo" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Lucilla Azevedo</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-primary-subtle text-primary fw-bold" style="border-radius: var(--laursa-radius-sm);">Coordenação de Projetos SEDUC</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Gestora pública com trajetória na educação e compromisso com oportunidades para a juventude. Atua na Coordenação de Projetos e Parcerias Estratégicas da Secretaria Executiva de Projetos, Tecnologia e Inovação da SEDUC Recife.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 14: Dr.ª Simone Brasil -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/Simone_Brasil.jpg" onerror="this.src='https://ui-avatars.com/api/?name=Simone+Brasil&background=6F42C1&color=fff&size=150'" alt="Dr.ª Simone Brasil" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Dr.ª Simone Brasil</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-purple-subtle text-dark fw-bold" style="background:#e8d9ff; border-radius: var(--laursa-radius-sm);">Presidente do FORAP / MT-PE</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Auditora-Fiscal do Trabalho, Coordenadora de Aprendizagem Profissional em Pernambuco e Presidente do Fórum Estadual de Aprendizagem Profissional de Pernambuco (FORAP).
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 15: Rafael Figueiredo -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/rafael_Figueiredo.png" onerror="this.src='https://ui-avatars.com/api/?name=Rafael+Figueiredo&background=3E82F4&color=fff&size=150'" alt="Rafael Figueiredo" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Rafael Figueiredo</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-primary-subtle text-primary fw-bold" style="border-radius: var(--laursa-radius-sm);">Procurador do Estado de PE</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Procurador do Estado de Pernambuco, ex-secretário de Ciência e Tecnologia do Recife, ex-vice-presidente da Emprel, ex-Procurador Geral e ex-Controlador Geral do Município, referência nacional em governo digital.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 16: Dr.ª Roxana Corbran -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/Roxana_Corbran.png" onerror="this.src='https://ui-avatars.com/api/?name=Roxana+Corbran&background=11B163&color=fff&size=150'" alt="Dr.ª Roxana Corbran" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Dr.ª Roxana Corbran</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-success-subtle text-success fw-bold" style="border-radius: var(--laursa-radius-sm);">Presidente da ALADA</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Advogada, doutora em Direito e Ciências Sociais e especialista em Direito Aeronáutico e Espacial. Presidente da Associação Latino-Americana de Direito Aeronáutico e Espacial (ALADA) e diretora do CIDA-E.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 17: Prof. Dr. Leonardo Barbosa -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/Leonard_Barbosa.png" onerror="this.src='https://ui-avatars.com/api/?name=Leonardo+Barbosa&background=0A6639&color=fff&size=150'" alt="Prof. Dr. Leonardo Barbosa" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Prof. Dr. Leonardo Barbosa</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-success-subtle text-success fw-bold" style="border-radius: var(--laursa-radius-sm);">Docente POLI/UPE</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Professor adjunto da POLI/UPE e Doutor em Engenharia e Tecnologia Espaciais pelo INPE. Possui experiência internacional em missões espaciais com atuações na Itália, EUA, Portugal e Espanha.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 18: Dr.ª Jailda Eulídia da Silva Pinto -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/Jailda_Eulidia.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Jailda+Eulidia&background=6F42C1&color=fff&size=150'" alt="Dr.ª Jailda Eulídia da Silva Pinto" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Dr.ª Jailda Eulídia da Silva Pinto</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-purple-subtle text-dark fw-bold" style="background:#e8d9ff; border-radius: var(--laursa-radius-sm);">Procuradora do Trabalho / MPT-PE</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Procuradora do Trabalho e Coordenadora Regional da Coordinfância. Doutora em Direito do Trabalho (UFPE/Universidade Cândido Mendes) e especialista em Direitos Humanos e Trabalho pela ESMPU.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 19: Juíza Maria Odete Freire de Araújo -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/Maria_Odete.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Maria+Odete&background=2957A3&color=fff&size=150'" alt="Juíza Maria Odete Freire de Araújo" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Juíza Maria Odete Freire de Araújo</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-primary-subtle text-primary fw-bold" style="border-radius: var(--laursa-radius-sm);">Juíza do Trabalho TRT-6</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Juíza do Trabalho do TRT-6, doutoranda em Direito pela UFPE. Gestora nacional do Programa de Enfrentamento ao Trabalho Escravo do TST e membro do Comitê Executivo Nacional do CNJ.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 20: Dra. Inessa Amâncio -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/Inessa_Amancio.png" onerror="this.src='https://ui-avatars.com/api/?name=Inessa+Amancio&background=11B163&color=fff&size=150'" alt="Dra. Inessa Amâncio" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Dra. Inessa Amâncio</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-success-subtle text-success fw-bold" style="border-radius: var(--laursa-radius-sm);">Pesquisadora ISI TICs / SENAI</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Pesquisadora Industrial em Sensoriamento Remoto no Instituto SENAI de Inovação (ISI TICs). Atua com Inteligência Geoespacial, drones, sensores e imagens orbitais. Doutora em Oceanografia e mestra em Ciências Geodésicas pela UFPE.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 21: Ricardo Brasileiro -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/Ricardo_Brasileiro.png" onerror="this.src='https://ui-avatars.com/api/?name=Ricardo+Brasileiro&background=2957A3&color=fff&size=150'" alt="Ricardo Brasileiro" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Ricardo Brasileiro</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-primary-subtle text-primary fw-bold" style="border-radius: var(--laursa-radius-sm);">Especialista SENAI-PE</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Especialista em inovação e tecnologias digitais do SENAI-PE. Atua na articulação de ecossistemas territoriais de tecnologia, conectividade e soluções orientadas ao setor industrial e espacial.
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-        <!-- Participante 22: Danielle Vieira -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/danielle_vieirra.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Danielle+Vieira&background=11B163&color=fff&size=150'" alt="Danielle Vieira" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Danielle Vieira</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-success-subtle text-success fw-bold" style="border-radius: var(--laursa-radius-sm);">Gestora Grau Técnico Boa Vista</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Gestora da unidade Grau Técnico Boa Vista, em Recife, com 30 anos de trajetória profissional em telecomunicações e educação. Atua na liderança de equipes e no desenvolvimento de pessoas, conectando formação profissional, tecnologia e oportunidades para fortalecer o protagonismo dos jovens e contribuir para o futuro urbano.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 23: Anna Araújo -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/anna_araujo.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Anna+Araujo&background=2957A3&color=fff&size=150'" alt="Anna Araújo" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Anna Araújo</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-primary-subtle text-primary fw-bold" style="border-radius: var(--laursa-radius-sm);">Head Educação Estratégica Grau</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Professora e Head Nacional de Educação Estratégica do Grau Educacional. Doutora em Comunicação, Linguagens e Cultura e mestre em Engenharia de Produção, tem mais de 16 anos de experiência em educação e gestão. Atua conectando educação profissional, empreendedorismo e empregabilidade para ampliar oportunidades de trabalho e geração de renda.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 24: Philype Castelo Branco -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/philype_castelo.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Philype+Castelo+Branco&background=0A6639&color=fff&size=150'" alt="Philype Castelo Branco" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Philype Castelo Branco</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-success-subtle text-success fw-bold" style="border-radius: var(--laursa-radius-sm);">Executivo de Tecnologia e Inovação</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Executivo de Tecnologia e Inovação, com mais de 20 anos de experiência em liderança estratégica, transformação digital e gestão de tecnologia. Especialista em conectar negócios, pessoas e tecnologia, impulsiona a inovação por meio de inteligência artificial, metodologias ágeis e soluções digitais que transformam ideias em resultados.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 25: Ian Grosner -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/ian_rosner.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Ian+Grosner&background=3E82F4&color=fff&size=150'" alt="Ian Grosner" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Ian Grosner</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-primary-subtle text-primary fw-bold" style="border-radius: var(--laursa-radius-sm);">Procurador-Chefe PF-AEB</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Procurador Federal desde 2002 e Procurador-Chefe da Procuradoria Federal junto à Agência Espacial Brasileira (PF-AEB). Mestre (LL.M.) em Direito Aeronáutico e Espacial por Leiden. Presidente do GT de Delimitação do Espaço Exterior no COPUOS, membro do IISL e Árbitro de disputas espaciais da Corte Permanente de Arbitragem (PCA) em Haia.
-              </p>
-            </div>
-          </div>
-        </div>
-
-<!-- Participante 26: Mônica Elizabeth Rocha de Oliveira -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/monica_elizabeth.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Monica+Elizabeth&background=0A6639&color=fff&size=150'" alt="Mônica Elizabeth Rocha de Oliveira" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Mônica Elizabeth Rocha de Oliveira</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-success-subtle text-success fw-bold" style="border-radius: var(--laursa-radius-sm);">Analista Sênior do INPE / AEB</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Analista Sênior do INPE cedida à Agência Espacial Brasileira (AEB). Doutora em Engenharia e Gerenciamento de Sistemas Espaciais pelo INPE, mestre pela UFPB e Engenheira Civil pela UNICAP.
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Participante 27: Dra. Márcia Alvarenga dos Santos -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/marcia_santos.png" onerror="this.src='https://ui-avatars.com/api/?name=Marcia+Alvarenga&background=2957A3&color=fff&size=150'" alt="Dra. Márcia Alvarenga dos Santos" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Dra. Márcia Alvarenga dos Santos</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-primary-subtle text-primary fw-bold" style="border-radius: var(--laursa-radius-sm);">Chefe de Cooperação Internacional AEB</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Chefe da Assessoria de Cooperação Internacional da Agência Espacial Brasileira (AEB) e Analista em C&T Sênior. Doutora em Direito pela UniSantos, membro do IISL e da SBDA, integra a delegação brasileira no COPUOS/ONU.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Participante 28: Raphael Gomes -->
-        <div class="col-md-6 col-lg-4">
-          <div class="card h-100 card-speaker p-4 text-center">
-            <div class="d-flex justify-content-center mb-3">
-              <img src="/static/raphael_gomes.jpeg" onerror="this.src='https://ui-avatars.com/api/?name=Raphael+Gomes&background=0A6639&color=fff&size=150'" alt="Raphael Gomes" class="speaker-avatar">
-            </div>
-            <div class="speaker-name">
-              <h3 class="h6 fw-bold text-dark mb-0">Raphael Gomes</h3>
-            </div>
-            <div class="mb-3">
-              <span class="badge bg-success-subtle text-success fw-bold" style="border-radius: var(--laursa-radius-sm);">Instrutor ESPRO / Gestão de Capital Humano</span>
-            </div>
-            <div class="speaker-bio">
-              <p class="mb-0">
-                Administrador e Especialista em Gestão do Capital Humano. Atua estrategicamente no ecossistema da Socioaprendizagem no ESPRO, conectando novas profissões, tecnologia e inovação para preparar jovens para o mercado do futuro.
-              </p>
-            </div>
-          </div>
-        </div>
-
-
-
-
-
-      </div>
-    </section>
-
-  </main>
-
-  <!-- Rodapé Oficial -->
-  <footer class="footer-space-official">
-    <div class="container">
-      <div class="row align-items-center py-2 g-3">
-        <div class="col-md-6 text-center text-md-start">
-          <span class="fw-bold text-white">Conectando jornadas</span>
-          <span class="mx-2 text-secondary d-none d-sm-inline">|</span>
-          <span class="text-info fw-bold">arena GO recife</span>
-        </div>
-        <div class="col-md-6 text-center text-md-end">
-          <div class="d-inline-flex align-items-center gap-2">
-            <span class="text-white small fw-bold">Prefeitura da Cidade do Recife</span>
-            <span class="badge bg-secondary-subtle text-secondary small">EMPREL</span>
+          <div class="col-lg-4 text-center text-lg-end">
+            <a
+              href="https://register.jalanlive.com/recnplay2026/tickets?pos=415"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-light fw-bold px-4 py-2"
+              style="
+                border-radius: var(--laursa-radius-md);
+                color: var(--laursa-secondary-dark);
+              "
+            >
+              <i class="bi bi-ticket-perforated-fill me-1"></i> Fazer Inscrição
+              Oficial
+            </a>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+      <!-- Grade Completa por Dia (Filtro por Abas) -->
+      <section class="mb-5" id="grade-dias">
+        <div
+          class="d-flex justify-content-between align-items-center flex-wrap gap-3 mb-4 p-3 bg-white border rounded-3 shadow-sm"
+        >
+          <div>
+            <h2 class="h4 section-title mb-1">
+              <i
+                class="bi bi-calendar-week me-2"
+                style="color: var(--laursa-primary-default)"
+              ></i
+              >Programação Diária Completa
+            </h2>
+            <p class="text-muted small mb-0">
+              Programação oficial da Arena GO Recife Space Tech transcrita
+              fielmente da planilha oficial.
+            </p>
+          </div>
+
+          <!-- Área de Downloads dos Documentos Oficiais -->
+          <div class="d-flex gap-2 flex-wrap">
+            <!-- Botão 1: Baixar / Abrir o PDF de Briefing -->
+            <a
+              href="/static/briefing_arena_space_tech_2026.pdf"
+              target="_blank"
+              download
+              class="btn btn-outline-primary btn-sm fw-bold px-3 py-2 d-inline-flex align-items-center"
+            >
+              <i class="bi bi-file-earmark-pdf-fill text-danger me-2 fs-6"></i>
+              <span>Baixar Briefing do Evento (PDF)</span>
+            </a>
+
+            <!-- Botão 2: Ver / Baixar o Cartaz da Programação -->
+            <a
+              href="/static/programacao_completa.jpeg"
+              target="_blank"
+              download
+              class="btn btn-outline-secondary btn-sm fw-bold px-3 py-2 d-inline-flex align-items-center"
+            >
+              <i class="bi bi-image text-primary me-2 fs-6"></i>
+              <span>Cartaz da Programação (JPEG)</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Abas dos 4 Dias -->
+        <ul
+          class="nav nav-pills nav-pills-dias mb-4 gap-2 flex-wrap"
+          id="pills-tab"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active"
+              id="pills-dia11-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-dia11"
+              type="button"
+              role="tab"
+            >
+              <i class="bi bi-calendar-event me-1"></i> 11/11 (Quarta-feira)
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="pills-dia12-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-dia12"
+              type="button"
+              role="tab"
+            >
+              <i class="bi bi-calendar-event me-1"></i> 12/11 (Quinta-feira)
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="pills-dia13-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-dia13"
+              type="button"
+              role="tab"
+            >
+              <i class="bi bi-calendar-event me-1"></i> 13/11 (Sexta-feira)
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="pills-dia14-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#pills-dia14"
+              type="button"
+              role="tab"
+            >
+              <i class="bi bi-calendar-event me-1"></i> 14/11 (Sábado)
+            </button>
+          </li>
+        </ul>
+
+        <!-- Conteúdo das Abas -->
+        <div class="tab-content" id="pills-tabContent">
+          <!-- DIA 11/11 (QUARTA-FEIRA) -->
+          <div
+            class="tab-pane fade show active"
+            id="pills-dia11"
+            role="tabpanel"
+          >
+            <div class="table-responsive table-laursa">
+              <table class="table table-hover align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th style="white-space: nowrap">Horário</th>
+                    <th>Local</th>
+                    <th>Parceiros</th>
+                    <th>Atividade</th>
+                    <th>Convidados</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- 10 às 12h: TRF-5 / Auditório da ESMAFE -->
+                  <tr>
+                    <td
+                      class="fw-bold text-primary font-monospace"
+                      style="white-space: nowrap"
+                    >
+                      10 às 12h
+                    </td>
+                    <td>
+                      <span class="badge badge-polo-trf d-block mb-1"
+                        >TRF-5</span
+                      >
+                      <small class="text-muted"
+                        >TRF-5, auditório da ESMAFE</small
+                      >
+                    </td>
+                    <td>
+                      TRF-5, FORAP, MPT, TRT-6, Superintendência do Ministério
+                      do Trabalho de Pernambuco, ACP
+                    </td>
+                    <td class="fw-semibold">
+                      Painel de debate: Lei da jovem aprendizagem e o papel do
+                      jovem recifense na revolução que envolve tecnologia
+                      digital, setor espacial e performance da cidade.
+                    </td>
+                    <td>
+                      <ul class="lista-convidados">
+                        <li class="item-convidado">
+                          Dr.ª Simone Brazil (MT-PE e Presidente FORAP)
+                        </li>
+                        <li class="item-convidado">
+                          Dr.ª Procuradora Jailda Eulídia da Silva Pinto (MPT)
+                        </li>
+                        <li class="item-convidado">
+                          Dr.ª Juíza Maria Odete Freire de Araujo (TRT-PE)
+                        </li>
+                        <li class="item-convidado">Mônica Elizabeth AEB</li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <!-- 10 às 12h: ACP Sala 2 -->
+                  <tr>
+                    <td
+                      class="fw-bold text-primary font-monospace"
+                      style="white-space: nowrap"
+                    >
+                      10 às 12h
+                    </td>
+                    <td>
+                      <span class="badge badge-polo-acp d-block mb-1">ACP</span>
+                      <small class="text-muted"
+                        >ACP - Associação Comercial de Pernambuco (1º andar,
+                        Sala 2)</small
+                      >
+                    </td>
+                    <td>ACP, Faculdade Estácio</td>
+                    <td class="fw-semibold">
+                      Viva Estácio Space Tech: o jovem, tecnologia e futuro da
+                      cidade
+                    </td>
+                    <td class="small text-muted">-</td>
+                  </tr>
+
+                  <!-- 13 às 15h: SENAC 235 -->
+                  <tr>
+                    <td
+                      class="fw-bold text-primary font-monospace"
+                      style="white-space: nowrap"
+                    >
+                      13 às 15h
+                    </td>
+                    <td>
+                      <span class="badge badge-polo-senac d-block mb-1"
+                        >SENAC 235</span
+                      >
+                      <small class="text-muted">Auditório SENAC 235</small>
+                    </td>
+                    <td>POLÍ-UPE, SENAC</td>
+                    <td class="fw-semibold">
+                      Demoday Inova Poli-UPE, Prof. Genésio Gomes
+                    </td>
+                    <td>
+                      <ul class="lista-convidados">
+                        <li class="item-convidado">
+                          <span class="tag-papel">Coordenador</span> Professor
+                          Genésio Gomes Poli-UPE
+                        </li>
+                        <li class="item-convidado">
+                          <span class="tag-papel">Palestrante Abertura</span>
+                          João Carlos Costa SECTI/Emprel
+                        </li>
+                        <li class="item-convidado">
+                          <span class="tag-papel">Avaliador</span> Francisco
+                          Vinícius Costa Guimarães, Emprel
+                        </li>
+                        <li class="item-convidado">
+                          <span class="tag-papel">Avaliador</span> Simeon Leslie
+                          Rahnemay Kohlan Rabbani, Emprel
+                        </li>
+                        <li class="item-convidado">
+                          <span class="tag-papel">Avaliador</span> Davi da Mota
+                          Nogueira, Emprel
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <!-- 14 às 16h: ACP Sala 2 -->
+                  <tr>
+                    <td
+                      class="fw-bold text-primary font-monospace"
+                      style="white-space: nowrap"
+                    >
+                      14 às 16h
+                    </td>
+                    <td>
+                      <span class="badge badge-polo-acp d-block mb-1">ACP</span>
+                      <small class="text-muted"
+                        >ACP - Associação Comercial de Pernambuco (1º andar,
+                        Sala 2)</small
+                      >
+                    </td>
+                    <td>ACP, FORAP</td>
+                    <td class="fw-semibold">
+                      Forap: O jovem e o futuro do Recife
+                    </td>
+                    <td>
+                      <ul class="lista-convidados">
+                        <li class="item-convidado">
+                          Maria Izabel - Forap, Rede Cidadã
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <!-- 14 às 16h: ACP Sala 1 -->
+                  <tr>
+                    <td
+                      class="fw-bold text-primary font-monospace"
+                      style="white-space: nowrap"
+                    >
+                      14 às 16h
+                    </td>
+                    <td>
+                      <span class="badge badge-polo-acp d-block mb-1">ACP</span>
+                      <small class="text-muted"
+                        >ACP - Associação Comercial de Pernambuco (1º andar,
+                        Sala 1)</small
+                      >
+                    </td>
+                    <td>ACP, FBR, Poli-UPE</td>
+                    <td class="fw-semibold">
+                      Painel de debate: Resiliência urbana, tecnologia digital,
+                      dados satelitais e conectividade na gestão urbana
+                    </td>
+                    <td>
+                      <ul class="lista-convidados">
+                        <li class="item-convidado">Ascânio França, CEO FBR</li>
+                        <li class="item-convidado">
+                          Prof. Dr. Leonardo, UPE/ INPE
+                        </li>
+                        <li class="item-convidado">Inessa Amâncio - SENAI</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- DIA 12/11 (QUINTA-FEIRA) -->
+          <div class="tab-pane fade" id="pills-dia12" role="tabpanel">
+            <div class="table-responsive table-laursa">
+              <table class="table table-hover align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th style="white-space: nowrap">Horário</th>
+                    <th>Local</th>
+                    <th>Parceiros</th>
+                    <th>Atividade</th>
+                    <th>Convidados</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- 9 às 12h: Galeria SENAC Apolo 235 -->
+                  <tr>
+                    <td
+                      class="fw-bold text-primary font-monospace"
+                      style="white-space: nowrap"
+                    >
+                      9 às 12h
+                    </td>
+                    <td>
+                      <span class="badge badge-polo-senac d-block mb-1"
+                        >SENAC APOLO 235</span
+                      >
+                      <small class="text-muted">Galeria SENAC Apolo 235</small>
+                    </td>
+                    <td>CORETO / SECTI / ACP / SENAC / Grau Educacional</td>
+                    <td class="fw-semibold">
+                      IdeaThon Coreto: O Pilar do futuro Recife, Chamie
+                    </td>
+                    <td>
+                      <ul class="lista-convidados">
+                        <li class="item-convidado">Gabriel Chamie - Coreto</li>
+                        <li class="item-convidado">Diogo Gomes - Emprel</li>
+                        <li class="item-convidado">
+                          <span class="tag-papel">Parceiro</span> Ernani - SENAC
+                        </li>
+                        <li class="item-convidado">
+                          <span class="tag-papel">Parceiro</span> Lucila -
+                          SEDUC, SEPT, Protec
+                        </li>
+                        <li class="item-convidado">
+                          Anna Araújo, Grau Educacional
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <!-- 10 às 12h: TRF-5 / ESMAFE -->
+                  <tr>
+                    <td
+                      class="fw-bold text-primary font-monospace"
+                      style="white-space: nowrap"
+                    >
+                      10 às 12h
+                    </td>
+                    <td>
+                      <span class="badge badge-polo-trf d-block mb-1"
+                        >TRF-5</span
+                      >
+                      <small class="text-muted"
+                        >TRF-5, auditório da ESMAFE</small
+                      >
+                    </td>
+                    <td>
+                      TRF-5, UNICAP, UFPE, IFPE, ALADA, Comissão Espacial da
+                      OAB-PE
+                    </td>
+                    <td class="fw-semibold">
+                      Painel de debate: A urgência do debate sobre direito e
+                      diplomacia espacial no Brasil
+                    </td>
+                    <td>
+                      <ul class="lista-convidados">
+                        <li class="item-convidado">
+                          Prof.ª Dr.ª Adriana Rocha, Unicap
+                        </li>
+                        <li class="item-convidado">
+                          Prof. Dr.º Thiago Bezerra, Comissão Espacial OAB-PE
+                        </li>
+                        <li class="item-convidado">
+                          Prof. Dr.º Torquato Castro Junior, Faculdade de
+                          Direito UFPE
+                        </li>
+                        <li class="item-convidado">
+                          Prof. Dr.ª Andréa Berenguer, IFPE
+                        </li>
+                        <li class="item-convidado">
+                          Prof. Dr.ª Roxana Corbran, ALADA
+                        </li>
+                        <li class="item-convidado">
+                          Marcia Alvarenga dos Santos, AEB
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <!-- 11:20 às 12:10 h: Teatro Hermínio Borba Filho -->
+                  <tr>
+                    <td
+                      class="fw-bold text-primary font-monospace"
+                      style="white-space: nowrap"
+                    >
+                      11:20 às 12:10 h
+                    </td>
+                    <td>
+                      <span class="badge bg-secondary d-block mb-1"
+                        >TEATRO</span
+                      >
+                      <small class="text-muted"
+                        >Teatro Herminio Borba Filho</small
+                      >
+                    </td>
+                    <td>Porto Digital</td>
+                    <td class="fw-semibold">
+                      O espaço começa aqui: Como se comunicar com o espaço?
+                      (Curadoria Porto Digital)
+                    </td>
+                    <td>
+                      <ul class="lista-convidados">
+                        <li class="item-convidado">Dr. Umut - NASA</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- DIA 13/11 (SEXTA-FEIRA) -->
+          <div class="tab-pane fade" id="pills-dia13" role="tabpanel">
+            <div class="table-responsive table-laursa">
+              <table class="table table-hover align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th style="white-space: nowrap">Horário</th>
+                    <th>Local</th>
+                    <th>Parceiros</th>
+                    <th>Atividade</th>
+                    <th>Convidados</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- 9 às 16h: ACP Hall térreo -->
+                  <tr>
+                    <td
+                      class="fw-bold text-primary font-monospace"
+                      style="white-space: nowrap"
+                    >
+                      9 às 16 h
+                    </td>
+                    <td>
+                      <span class="badge badge-polo-acp d-block mb-1">ACP</span>
+                      <small class="text-muted"
+                        >ACP - Associação Comercial de Pernambuco (Hall
+                        térreo)</small
+                      >
+                    </td>
+                    <td>ACP, SAR</td>
+                    <td class="fw-semibold">Planetário inflável e exposição</td>
+                    <td>
+                      <ul class="lista-convidados">
+                        <li class="item-convidado">
+                          Marcelo José dos Santos - Diretor SAR
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <!-- 10 às 12h: TRF-5 / ESMAFE -->
+                  <tr>
+                    <td
+                      class="fw-bold text-primary font-monospace"
+                      style="white-space: nowrap"
+                    >
+                      10 às 12h
+                    </td>
+                    <td>
+                      <span class="badge badge-polo-trf d-block mb-1"
+                        >TRF-5</span
+                      >
+                      <small class="text-muted"
+                        >TRF-5, auditório da ESMAFE</small
+                      >
+                    </td>
+                    <td>TRF-5, Parqtec, Parqtel</td>
+                    <td class="fw-semibold">
+                      Painel de debate: Transformação digital, deep tech e
+                      inovação industrial como competências da cidade do Recife
+                      num olhar sistêmico de futuro.
+                    </td>
+                    <td>
+                      <ul class="lista-convidados">
+                        <li class="item-convidado">
+                          Prof. Dr. Roberto Guerra, Diretor do Parqtec
+                        </li>
+                        <li class="item-convidado">
+                          Prof. Dr. Rogério, Diretor do Parqtel
+                        </li>
+                        <li class="item-convidado">Mônica Elizabeth, AEB</li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <!-- 10 às 12h: ACP Sala 2 -->
+                  <tr>
+                    <td
+                      class="fw-bold text-primary font-monospace"
+                      style="white-space: nowrap"
+                    >
+                      10 às 12h
+                    </td>
+                    <td>
+                      <span class="badge badge-polo-acp d-block mb-1">ACP</span>
+                      <small class="text-muted"
+                        >ACP - Associação Comercial de Pernambuco (1º andar,
+                        Sala 2)</small
+                      >
+                    </td>
+                    <td>ACP, Poli-UPE</td>
+                    <td class="fw-semibold">
+                      Poli-UPE: O futuro da Educação e as tecnologias do futuro
+                    </td>
+                    <td>
+                      <ul class="lista-convidados">
+                        <li class="item-convidado">
+                          Prof. Genésio Gomes, Poli-UPE
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <!-- 13 às 15h: Carreta Smart Lab -->
+                  <tr>
+                    <td
+                      class="fw-bold text-primary font-monospace"
+                      style="white-space: nowrap"
+                    >
+                      13 às 15h
+                    </td>
+                    <td>
+                      <span class="badge badge-polo-senac d-block mb-1"
+                        >CARRETA SMART LAB</span
+                      >
+                      <small class="text-muted">Carreta Smart Lab</small>
+                    </td>
+                    <td>POLI-UPE, SENAC</td>
+                    <td class="fw-semibold">
+                      Oficineiros UPE: Oficina interativa CubeSat: monte e
+                      controle um satélite ao vivo. Prof. Wladimir
+                    </td>
+                    <td>
+                      <ul class="lista-convidados">
+                        <li class="item-convidado">
+                          Professor Vladimir Soares, Poli-UPE
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <!-- 14 às 16h: ACP Sala 2 -->
+                  <tr>
+                    <td
+                      class="fw-bold text-primary font-monospace"
+                      style="white-space: nowrap"
+                    >
+                      14 às 16h
+                    </td>
+                    <td>
+                      <span class="badge badge-polo-acp d-block mb-1">ACP</span>
+                      <small class="text-muted"
+                        >ACP - Associação Comercial de Pernambuco (1º andar,
+                        Sala 2)</small
+                      >
+                    </td>
+                    <td>ACP, FORAP</td>
+                    <td class="fw-semibold">
+                      Forap: O jovem e o futuro do Recife
+                    </td>
+                    <td>
+                      <ul class="lista-convidados">
+                        <li class="item-convidado">
+                          Maria Izabel - Forap, Rede Cidadã
+                        </li>
+                        <li class="item-convidado">
+                          Lucas Felipe Silva dos Santos - SEST/SENAT
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <!-- 14 às 16h: ACP Sala 1 -->
+                  <tr>
+                    <td
+                      class="fw-bold text-primary font-monospace"
+                      style="white-space: nowrap"
+                    >
+                      14 às 16h
+                    </td>
+                    <td>
+                      <span class="badge badge-polo-acp d-block mb-1">ACP</span>
+                      <small class="text-muted"
+                        >ACP - Associação Comercial de Pernambuco (1º andar,
+                        Sala 1)</small
+                      >
+                    </td>
+                    <td>ACP, UFPE, Oeste Inovador, Parquetec, Poli-UPE</td>
+                    <td class="fw-semibold">
+                      Painel de debate: Desafios, perspectivas e oportunidades
+                      dos próximos 25 anos na interface entre transformação
+                      digital e serviços baseados em espaço
+                    </td>
+                    <td>
+                      <ul class="lista-convidados">
+                        <li class="item-convidado">
+                          Rafael Figueiredo, Procurador PE
+                        </li>
+                        <li class="item-convidado">
+                          Pedro Carelli (UFPE Oeste Inovador)
+                        </li>
+                        <li class="item-convidado">Manoel Marinho, Poli-UPE</li>
+                        <li class="item-convidado">
+                          Ricardo Brasileiro - SENAI
+                        </li>
+                        <li class="item-convidado">
+                          Prof. Dr. Leonardo - POLÍ-UPE
+                        </li>
+                        <li class="item-convidado">Mônica Elizabeth, AEB</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- DIA 14/11 (SÁBADO) -->
+          <div class="tab-pane fade" id="pills-dia14" role="tabpanel">
+            <div class="table-responsive table-laursa">
+              <table class="table table-hover align-middle mb-0">
+                <thead>
+                  <tr>
+                    <th style="white-space: nowrap">Horário</th>
+                    <th>Local</th>
+                    <th>Parceiros</th>
+                    <th>Atividade</th>
+                    <th>Convidados</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <!-- 9 às 10h: Carreta Smart Lab -->
+                  <tr>
+                    <td
+                      class="fw-bold text-primary font-monospace"
+                      style="white-space: nowrap"
+                    >
+                      9 às 10h
+                    </td>
+                    <td>
+                      <span class="badge badge-polo-senac d-block mb-1"
+                        >CARRETA SMART LAB</span
+                      >
+                      <small class="text-muted">Carreta Smart Lab</small>
+                    </td>
+                    <td>POLÍ-UPE, SENAC</td>
+                    <td class="fw-semibold">
+                      Oficineiros UPE: Oficina de Drones com Equipe DeltaProf .
+                      George
+                    </td>
+                    <td>
+                      <ul class="lista-convidados">
+                        <li class="item-convidado">
+                          Professor George Azevedo, Polí-UPE
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <!-- 9 às 12 h: ACP Hall térreo -->
+                  <tr>
+                    <td
+                      class="fw-bold text-primary font-monospace"
+                      style="white-space: nowrap"
+                    >
+                      9 às 12 h
+                    </td>
+                    <td>
+                      <span class="badge badge-polo-acp d-block mb-1">ACP</span>
+                      <small class="text-muted"
+                        >ACP - Associação Comercial de Pernambuco (Hall
+                        terreo)</small
+                      >
+                    </td>
+                    <td>ACP, SAR</td>
+                    <td class="fw-semibold">Planetário inflável e exposição</td>
+                    <td>
+                      <ul class="lista-convidados">
+                        <li class="item-convidado">
+                          Marcelo José dos Santos - Diretor SAR
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+
+                  <!-- 10 às 12 h: ACP Sala 2 -->
+                  <tr>
+                    <td
+                      class="fw-bold text-primary font-monospace"
+                      style="white-space: nowrap"
+                    >
+                      10 às 12 h
+                    </td>
+                    <td>
+                      <span class="badge badge-polo-acp d-block mb-1">ACP</span>
+                      <small class="text-muted"
+                        >ACP - Associação Comercial de Pernambuco (1º andar,
+                        Sala 2)</small
+                      >
+                    </td>
+                    <td>ACP, Grau Educacional</td>
+                    <td class="fw-semibold">
+                      Grau Educacional: jovens, tecnologia e futuro da cidade
+                    </td>
+                    <td class="small text-muted">-</td>
+                  </tr>
+
+                  <!-- 10 às 12h: ACP Sala 1 -->
+                  <tr>
+                    <td
+                      class="fw-bold text-primary font-monospace"
+                      style="white-space: nowrap"
+                    >
+                      10 às 12h
+                    </td>
+                    <td>
+                      <span class="badge badge-polo-acp d-block mb-1">ACP</span>
+                      <small class="text-muted"
+                        >ACP - Associação Comercial de Pernambuco (1º andar,
+                        Sala 1)</small
+                      >
+                    </td>
+                    <td>ACP</td>
+                    <td class="fw-semibold">
+                      Painel de debate: Papel dos ecossistemas territoriais em
+                      tecnologias digitais para enfrentar os desafios no setor
+                      espacial
+                    </td>
+                    <td>
+                      <ul class="lista-convidados">
+                        <li class="item-convidado">
+                          Ricardo Brasileiro, SENAI
+                        </li>
+                        <li class="item-convidado">Mônica Elizabeth, AEB</li>
+                      </ul>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Circuitos Contínuos (11 a 14 de Novembro) -->
+      <section class="mb-5" id="circuitos-fixos">
+        <h2 class="h4 section-title">
+          <i
+            class="bi bi-compass me-2"
+            style="color: var(--laursa-going-dark)"
+          ></i
+          >Circuitos Contínuos da UFRPE (14/11, das 9 às 16h)
+        </h2>
+        <div class="row g-4">
+          <!-- MARCO ZERO E PRAÇA DO ARSENAL -->
+          <div class="col-lg-6">
+            <div
+              class="card h-100 border-0 p-4 shadow-sm bg-white"
+              style="
+                border-radius: var(--laursa-radius-lg);
+                border-left: 5px solid var(--laursa-going-default) !important;
+              "
+            >
+              <div
+                class="d-flex justify-content-between align-items-start mb-2"
+              >
+                <span class="badge bg-danger"
+                  >MARCO ZERO E PRAÇA DO ARSENAL</span
+                >
+                <span class="badge bg-light text-dark border"
+                  >Manhã / Tarde</span
+                >
+              </div>
+              <h3 class="h5 fw-bold text-dark mb-1">
+                Ciências, foguetes e imaginação
+              </h3>
+              <p class="text-secondary small mb-3">
+                <strong>Tema:</strong> Atividade de entreterimento para conectar
+                com o tema espacial
+              </p>
+
+              <div class="p-3 bg-light rounded-2 border">
+                <h4 class="h6 fw-bold text-dark mb-2">Programação:</h4>
+                <ul class="list-unstyled small mb-0">
+                  <li>
+                    <strong>14/11/2026 (SÁB):</strong> Manhã - Oficina de
+                    Lançamento Foguetes
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- TORRE MALAKOF -->
+          <div class="col-lg-6">
+            <div
+              class="card h-100 border-0 p-4 shadow-sm bg-white"
+              style="
+                border-radius: var(--laursa-radius-lg);
+                border-left: 5px solid var(--laursa-primary-default) !important;
+              "
+            >
+              <div
+                class="d-flex justify-content-between align-items-start mb-2"
+              >
+                <span class="badge badge-polo-astronomia">TORRE MALAKOF</span>
+                <span class="badge bg-light text-dark border"
+                  >Manhã / Tarde</span
+                >
+              </div>
+              <h3 class="h5 fw-bold text-dark mb-1">
+                Atividades de oficinas e extensão relacionadas à Astronomia
+              </h3>
+              <p class="text-secondary small mb-3">
+                <strong>Espaço:</strong> Salas do Torre Malakof
+              </p>
+
+              <div class="p-3 bg-light rounded-2 border">
+                <h4 class="h6 fw-bold text-dark mb-2">Atividades:</h4>
+                <ul class="list-unstyled small mb-0">
+                  <li class="mb-2">
+                    Observação astronômica com telescópios, máscaras solares e
+                    aplicativos para celular;
+                  </li>
+                  <li class="mb-2">
+                    Oficina de montagem e lançamento de foguetes educativos;
+                  </li>
+                  <li class="mb-2">
+                    Palestras temáticas sobre Astronomia e Ciências Espaciais;
+                  </li>
+                  <li class="mb-2">
+                    Representação teatral sobre episódios e personagens da
+                    Astronomia;
+                  </li>
+                  <li>
+                    Turismo Astronômico pelo observatório de Jorge Marcgrave
+                    (patrono da Astronomia de Pernambuco) e pela Torre Malakoff
+                    de Dom Pedro II (patrono da Astronomia no Brasil).
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Participantes e Facilitadores -->
+      <section class="mb-5" id="participantes">
+        <h2 class="h4 section-title">
+          <i
+            class="bi bi-people-fill me-2"
+            style="color: var(--laursa-primary-default)"
+          ></i
+          >Participantes e Facilitadores
+        </h2>
+        <p class="text-muted">
+          Especialistas e líderes institucionais presentes na trilha oficial da
+          Arena GO Recife Space Tech.
+        </p>
+
+        <div class="row g-4">
+          <!-- Participante 1: José Roberto Ferreira Guerra -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/JOSE_ROBERTO.jpeg"
+                  alt="José Roberto Ferreira Guerra"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">
+                  José Roberto Ferreira Guerra
+                </h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-primary-subtle text-primary fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Diretor do Parque.TeC UFPE</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Diretor do Parque Tecnológico e Científico da UFPE e Professor
+                  do DCA e PPHTur/CCSA. Possui mais de uma década de experiência
+                  em inovação e coordenação de projetos voltados ao
+                  empreendedorismo tecnológico.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 2: João Carlos Costa -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/joao_carlos.jpeg"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Joao+Carlos+Costa&background=2957A3&color=fff&size=150'
+                  "
+                  alt="João Carlos Costa"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">João Carlos Costa</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-primary-subtle text-primary fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Assessor Especial Secti/Emprel</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Lidera projetos estratégicos phygital como Arena Go Recife e
+                  Recife Space Tech. Especialista em gestão pública e
+                  orquestração de ecossistemas inovadores, com formação
+                  executiva em Harvard e doutorando em Administração.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 3: Dr. Rogério Pontes -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/rogerio_pontes.jpeg"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Rogerio+Pontes&background=0A6639&color=fff&size=150'
+                  "
+                  alt="Dr. Rogério Pontes"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">Dr. Rogério Pontes</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-success-subtle text-success fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Gerente Geral CT&I PARQTEL</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Doutor em Engenharia Mecânica e Professor Associado da
+                  POLI/UPE e PPGES. Atua na gerência de CT&I da SECTI-PE,
+                  liderando projetos de Pesquisa, Desenvolvimento e Inovação
+                  voltados para a Indústria 4.0.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 4: Dr. Thiago Carvalho -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/thiago_carvalho.jpeg"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Thiago+Carvalho&background=3E82F4&color=fff&size=150'
+                  "
+                  alt="Dr. Thiago Carvalho"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">Dr. Thiago Carvalho</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-info-subtle text-dark fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Direito Espacial OAB/PE</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Mestre em Direito pela UFPE e Presidente da Comissão de
+                  Direito Aeronáutico e Espacial da OAB/PE. Fundador da Academia
+                  do Espaço, com destacada atuação jurídica e regulatória no
+                  setor aeroespacial.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 5: Dra. Andréa Berenguer -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/andrea_berenguer.jpeg"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Andrea+Berenguer&background=6F42C1&color=fff&size=150'
+                  "
+                  alt="Dra. Andréa Berenguer"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">Dra. Andréa Berenguer</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-purple-subtle text-dark fw-bold"
+                  style="
+                    background: #e8d9ff;
+                    border-radius: var(--laursa-radius-sm);
+                  "
+                  >Docente IFPE / Recife Space</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Doutora em Ciências Jurídicas e Professora do IFPE com 30 anos
+                  de docência em Direito e Turismo. Coordenadora de extensão e
+                  colaboradora da política pública municipal Recife Space e do
+                  Ecossistema Oeste Inovador.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 6: Ascânio França -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/ascanio_franca.png"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Ascanio+Franca&background=11B163&color=fff&size=150'
+                  "
+                  alt="Ascânio França"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">Ascânio França</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-success-subtle text-success fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Fundador e CEO da FBR Digital</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Ascânio França, 37 anos, Caruaruense de Recife, pai de Antônio
+                  e Liana, Fundador e CEO da FBR Digital e sócio-fundador da
+                  Lumos Academy. Embaixador do Porto Digital de Pernambuco,
+                  Membro do Advisory Board do NERD e Conselheiro do Tapioca
+                  Valley.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 7: Prof. George Azevedo -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/GEORGE_AZEVEDO.jpeg"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=George+Azevedo&background=0A6639&color=fff&size=150'
+                  "
+                  alt="Prof. George Azevedo"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">Prof. George Azevedo</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-success-subtle text-success fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Coordenador Setorial POLI/UPE</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Doutor em Engenharia da Computação e docente da POLI/UPE. Atua
+                  em controle de sistemas dinâmicos, robótica, visão
+                  computacional, inteligência artificial, sistemas embarcados e
+                  drones voltados a aplicações práticas da engenharia.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 8: Prof. Vladimir Soares -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/VLADIMIR_SOARES.jpeg"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Vladimir+Soares&background=2957A3&color=fff&size=150'
+                  "
+                  alt="Prof. Vladimir Soares"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">Prof. Vladimir Soares</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-primary-subtle text-primary fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Coordenador LabTel / POLI-UPE</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Doutor em Engenharia Elétrica e Professor Assistente da
+                  POLI-UPE. Coordenador do LabTel e orientador da equipe de
+                  CubeSats DeltaV Satélites, pesquisando arquiteturas de
+                  comunicação para nanossatélites e sensores ópticos.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 10: Adriana Rocha Coutinho -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/adriana_rocha.jpg"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Adriana+Rocha&background=6F42C1&color=fff&size=150'
+                  "
+                  alt="Adriana Rocha Coutinho"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">
+                  Adriana Rocha Coutinho
+                </h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-purple-subtle text-dark fw-bold"
+                  style="
+                    background: #e8d9ff;
+                    border-radius: var(--laursa-radius-sm);
+                  "
+                  >Docente Unicap / Doutoranda PPGD</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Advogada, professora de Direito Constitucional da Unicap e
+                  doutoranda em Cidadania Digital (PPGD-Unicap). Mestra em
+                  Direito pela PUC-SP, ex-vice-presidente da OAB-PE e
+                  ex-conselheira federal do CFOAB.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 9: Prof. Genésio Gomes -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/GENESIO_GOMES.jpeg"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Genesio+Gomes&background=0A6639&color=fff&size=150'
+                  "
+                  alt="Prof. Genésio Gomes"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">Prof. Genésio Gomes</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-success-subtle text-success fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Coordenador INOVA POLI/UPE</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Doutor em Ciência da Computação (CIn/UFPE), Professor de
+                  Empreendedorismo da UPE e coordenador do INOVA POLI/UPE.
+                  Fundador do Células Empreendedoras e investidor anjo com
+                  prêmios nacionais em inovação aberta.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 11: Marcelo José dos Santos -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/marcelo_jose.jpeg"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Marcelo+Jose+dos+Santos&background=198754&color=fff&size=150'
+                  "
+                  alt="Marcelo José dos Santos"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">
+                  Marcelo José dos Santos
+                </h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-success-subtle text-success fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Presidente da SAR</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Presidente da Sociedade Astronômica do Recife (SAR).
+                  Pós-graduando em ensino de Astronomia, astrônomo amador e
+                  divulgador científico.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 12: Pedro Câmera -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/Pedro_camera.jpeg"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Pedro+Camera&background=3E82F4&color=fff&size=150'
+                  "
+                  alt="Pedro Câmera"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">Pedro Câmera</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-primary-subtle text-primary fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Secretário Executivo da PCR</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Biólogo, mestre e gestor público. Atualmente é Secretário
+                  Executivo de Trabalho e Qualificação Profissional da
+                  Prefeitura do Recife, integrando visão estratégica e gestão
+                  orientada por evidências.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 13: Lucilla Azevedo -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/lucilla_azeved.png"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Lucilla+Azevedo&background=2957A3&color=fff&size=150'
+                  "
+                  alt="Lucilla Azevedo"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">Lucilla Azevedo</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-primary-subtle text-primary fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Coordenação de Projetos SEDUC</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Gestora pública com trajetória na educação e compromisso com
+                  oportunidades para a juventude. Atua na Coordenação de
+                  Projetos e Parcerias Estratégicas da Secretaria Executiva de
+                  Projetos, Tecnologia e Inovação da SEDUC Recife.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 14: Dr.ª Simone Brasil -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/Simone_Brasil.jpg"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Simone+Brasil&background=6F42C1&color=fff&size=150'
+                  "
+                  alt="Dr.ª Simone Brasil"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">Dr.ª Simone Brasil</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-purple-subtle text-dark fw-bold"
+                  style="
+                    background: #e8d9ff;
+                    border-radius: var(--laursa-radius-sm);
+                  "
+                  >Presidente do FORAP / MT-PE</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Auditora-Fiscal do Trabalho, Coordenadora de Aprendizagem
+                  Profissional em Pernambuco e Presidente do Fórum Estadual de
+                  Aprendizagem Profissional de Pernambuco (FORAP).
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 15: Rafael Figueiredo -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/rafael_Figueiredo.png"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Rafael+Figueiredo&background=3E82F4&color=fff&size=150'
+                  "
+                  alt="Rafael Figueiredo"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">Rafael Figueiredo</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-primary-subtle text-primary fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Procurador do Estado de PE</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Procurador do Estado de Pernambuco, ex-secretário de Ciência e
+                  Tecnologia do Recife, ex-vice-presidente da Emprel,
+                  ex-Procurador Geral e ex-Controlador Geral do Município,
+                  referência nacional em governo digital.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 16: Dr.ª Roxana Corbran -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/Roxana_Corbran.png"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Roxana+Corbran&background=11B163&color=fff&size=150'
+                  "
+                  alt="Dr.ª Roxana Corbran"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">Dr.ª Roxana Corbran</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-success-subtle text-success fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Presidente da ALADA</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Advogada, doutora em Direito e Ciências Sociais e especialista
+                  em Direito Aeronáutico e Espacial. Presidente da Associação
+                  Latino-Americana de Direito Aeronáutico e Espacial (ALADA) e
+                  diretora do CIDA-E.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 17: Prof. Dr. Leonardo Barbosa -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/Leonard_Barbosa.png"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Leonardo+Barbosa&background=0A6639&color=fff&size=150'
+                  "
+                  alt="Prof. Dr. Leonardo Barbosa"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">
+                  Prof. Dr. Leonardo Barbosa
+                </h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-success-subtle text-success fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Docente POLI/UPE</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Professor adjunto da POLI/UPE e Doutor em Engenharia e
+                  Tecnologia Espaciais pelo INPE. Possui experiência
+                  internacional em missões espaciais com atuações na Itália,
+                  EUA, Portugal e Espanha.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 18: Dr.ª Jailda Eulídia da Silva Pinto -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/Jailda_Eulidia.jpeg"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Jailda+Eulidia&background=6F42C1&color=fff&size=150'
+                  "
+                  alt="Dr.ª Jailda Eulídia da Silva Pinto"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">
+                  Dr.ª Jailda Eulídia da Silva Pinto
+                </h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-purple-subtle text-dark fw-bold"
+                  style="
+                    background: #e8d9ff;
+                    border-radius: var(--laursa-radius-sm);
+                  "
+                  >Procuradora do Trabalho / MPT-PE</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Procuradora do Trabalho e Coordenadora Regional da
+                  Coordinfância. Doutora em Direito do Trabalho
+                  (UFPE/Universidade Cândido Mendes) e especialista em Direitos
+                  Humanos e Trabalho pela ESMPU.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 19: Juíza Maria Odete Freire de Araújo -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/Maria_Odete.jpeg"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Maria+Odete&background=2957A3&color=fff&size=150'
+                  "
+                  alt="Juíza Maria Odete Freire de Araújo"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">
+                  Juíza Maria Odete Freire de Araújo
+                </h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-primary-subtle text-primary fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Juíza do Trabalho TRT-6</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Juíza do Trabalho do TRT-6, doutoranda em Direito pela UFPE.
+                  Gestora nacional do Programa de Enfrentamento ao Trabalho
+                  Escravo do TST e membro do Comitê Executivo Nacional do CNJ.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 20: Dra. Inessa Amâncio -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/Inessa_Amancio.png"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Inessa+Amancio&background=11B163&color=fff&size=150'
+                  "
+                  alt="Dra. Inessa Amâncio"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">Dra. Inessa Amâncio</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-success-subtle text-success fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Pesquisadora ISI TICs / SENAI</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Pesquisadora Industrial em Sensoriamento Remoto no Instituto
+                  SENAI de Inovação (ISI TICs). Atua com Inteligência
+                  Geoespacial, drones, sensores e imagens orbitais. Doutora em
+                  Oceanografia e mestra em Ciências Geodésicas pela UFPE.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 21: Ricardo Brasileiro -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/Ricardo_Brasileiro.png"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Ricardo+Brasileiro&background=2957A3&color=fff&size=150'
+                  "
+                  alt="Ricardo Brasileiro"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">Ricardo Brasileiro</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-primary-subtle text-primary fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Especialista SENAI-PE</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Especialista em inovação e tecnologias digitais do SENAI-PE.
+                  Atua na articulação de ecossistemas territoriais de
+                  tecnologia, conectividade e soluções orientadas ao setor
+                  industrial e espacial.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 22: Danielle Vieira -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/danielle_vieirra.jpeg"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Danielle+Vieira&background=11B163&color=fff&size=150'
+                  "
+                  alt="Danielle Vieira"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">Danielle Vieira</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-success-subtle text-success fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Gestora Grau Técnico Boa Vista</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Gestora da unidade Grau Técnico Boa Vista, em Recife, com 30
+                  anos de trajetória profissional em telecomunicações e
+                  educação. Atua na liderança de equipes e no desenvolvimento de
+                  pessoas, conectando formação profissional, tecnologia e
+                  oportunidades para fortalecer o protagonismo dos jovens e
+                  contribuir para o futuro urbano.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 23: Anna Araújo -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/anna_araujo.jpeg"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Anna+Araujo&background=2957A3&color=fff&size=150'
+                  "
+                  alt="Anna Araújo"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">Anna Araújo</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-primary-subtle text-primary fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Head Educação Estratégica Grau</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Professora e Head Nacional de Educação Estratégica do Grau
+                  Educacional. Doutora em Comunicação, Linguagens e Cultura e
+                  mestre em Engenharia de Produção, tem mais de 16 anos de
+                  experiência em educação e gestão. Atua conectando educação
+                  profissional, empreendedorismo e empregabilidade para ampliar
+                  oportunidades de trabalho e geração de renda.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 24: Philype Castelo Branco -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/philype_castelo.jpeg"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Philype+Castelo+Branco&background=0A6639&color=fff&size=150'
+                  "
+                  alt="Philype Castelo Branco"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">
+                  Philype Castelo Branco
+                </h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-success-subtle text-success fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Executivo de Tecnologia e Inovação</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Executivo de Tecnologia e Inovação, com mais de 20 anos de
+                  experiência em liderança estratégica, transformação digital e
+                  gestão de tecnologia. Especialista em conectar negócios,
+                  pessoas e tecnologia, impulsiona a inovação por meio de
+                  inteligência artificial, metodologias ágeis e soluções
+                  digitais que transformam ideias em resultados.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 25: Ian Grosner -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/ian_rosner.jpeg"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Ian+Grosner&background=3E82F4&color=fff&size=150'
+                  "
+                  alt="Ian Grosner"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">Ian Grosner</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-primary-subtle text-primary fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Procurador-Chefe PF-AEB</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Procurador Federal desde 2002 e Procurador-Chefe da
+                  Procuradoria Federal junto à Agência Espacial Brasileira
+                  (PF-AEB). Mestre (LL.M.) em Direito Aeronáutico e Espacial por
+                  Leiden. Presidente do GT de Delimitação do Espaço Exterior no
+                  COPUOS, membro do IISL e Árbitro de disputas espaciais da
+                  Corte Permanente de Arbitragem (PCA) em Haia.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 26: Mônica Elizabeth Rocha de Oliveira -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/monica_elizabeth.jpeg"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Monica+Elizabeth&background=0A6639&color=fff&size=150'
+                  "
+                  alt="Mônica Elizabeth Rocha de Oliveira"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">
+                  Mônica Elizabeth Rocha de Oliveira
+                </h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-success-subtle text-success fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Analista Sênior do INPE / AEB</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Analista Sênior do INPE cedida à Agência Espacial Brasileira
+                  (AEB). Doutora em Engenharia e Gerenciamento de Sistemas
+                  Espaciais pelo INPE, mestre pela UFPB e Engenheira Civil pela
+                  UNICAP.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 27: Dra. Márcia Alvarenga dos Santos -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/marcia_santos.png"
+                  style="object-position: left center"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Marcia+Alvarenga&background=2957A3&color=fff&size=150'
+                  "
+                  alt="Dra. Márcia Alvarenga dos Santos"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">
+                  Dra. Márcia Alvarenga dos Santos
+                </h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-primary-subtle text-primary fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Chefe de Cooperação Internacional AEB</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Chefe da Assessoria de Cooperação Internacional da Agência
+                  Espacial Brasileira (AEB) e Analista em C&T Sênior. Doutora em
+                  Direito pela UniSantos, membro do IISL e da SBDA, integra a
+                  delegação brasileira no COPUOS/ONU.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 28: Raphael Gomes -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/raphael_gomes.jpeg"
+                  style="object-position: top center"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Raphael+Gomes&background=0A6639&color=fff&size=150'
+                  "
+                  alt="Raphael Gomes"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">Raphael Gomes</h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-success-subtle text-success fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Instrutor ESPRO / Gestão de Capital Humano</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Administrador e Especialista em Gestão do Capital Humano. Atua
+                  estrategicamente no ecossistema da Socioaprendizagem no ESPRO,
+                  conectando novas profissões, tecnologia e inovação para
+                  preparar jovens para o mercado do futuro.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Participante 29: Camila Borges da Silva -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card h-100 card-speaker p-4 text-center">
+              <div class="d-flex justify-content-center mb-3">
+                <img
+                  src="/static/camila_borges.jpg"
+                  style="object-position: top center"
+                  onerror="
+                    this.src =
+                      'https://ui-avatars.com/api/?name=Camila+Borges&background=0A6639&color=fff&size=150'
+                  "
+                  alt="Camila Borges da Silva"
+                  class="speaker-avatar"
+                />
+              </div>
+              <div class="speaker-name">
+                <h3 class="h6 fw-bold text-dark mb-0">
+                  Camila Borges da Silva
+                </h3>
+              </div>
+              <div class="mb-3">
+                <span
+                  class="badge bg-success-subtle text-success fw-bold"
+                  style="border-radius: var(--laursa-radius-sm)"
+                  >Assessoria Técnica COP-Recife</span
+                >
+              </div>
+              <div class="speaker-bio">
+                <p class="mb-0">
+                  Assistente Social (UFPE), educadora social e pós-graduada em
+                  gestão de projetos. Atua na Assessoria Técnica de Projetos e
+                  Monitoramento do Centro de Operações do Recife (COP),
+                  articulando dados e governança urbana para a gestão da cidade.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Rodapé Oficial -->
+    <footer class="footer-space-official">
+      <div class="container">
+        <div class="row align-items-center py-2 g-3">
+          <div class="col-md-6 text-center text-md-start">
+            <span class="fw-bold text-white">Conectando jornadas</span>
+            <span class="mx-2 text-secondary d-none d-sm-inline">|</span>
+            <span class="text-info fw-bold">arena GO recife</span>
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            <div class="d-inline-flex align-items-center gap-2">
+              <span class="text-white small fw-bold"
+                >Prefeitura da Cidade do Recife</span
+              >
+              <span class="badge bg-secondary-subtle text-secondary small"
+                >EMPREL</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
